@@ -1,0 +1,38 @@
+{
+  "name": "verbatims",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "vitest run && tsc -p .",
+    "download": "tsx --env-file-if-exists=.env src/cli/download.ts",
+    "pick-listing": "tsx --env-file-if-exists=.env src/cli/pick-listing.ts",
+    "sample": "tsx --env-file-if-exists=.env src/cli/sample.ts",
+    "detect-names": "tsx --env-file-if-exists=.env src/cli/detect-names.ts",
+    "redact": "tsx --env-file-if-exists=.env src/cli/redact.ts",
+    "rate": "tsx --env-file-if-exists=.env src/cli/rate.ts",
+    "redate": "tsx --env-file-if-exists=.env src/cli/redate.ts",
+    "build": "tsx --env-file-if-exists=.env src/cli/build.ts",
+    "label": "node --env-file-if-exists=.env node_modules/vite/bin/vite.js --config labeller/vite.config.ts",
+    "typecheck": "tsc -p ."
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.10.0",
+    "csv-parse": "^7.0.3",
+    "franc": "^6.2.0",
+    "zod": "^4.6.7"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

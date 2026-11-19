@@ -1,0 +1,3 @@
+id,name,host_name,number_of_reviews,review_scores_rating,review_scores_accuracy,review_scores_cleanliness,review_scores_checkin,review_scores_communication,review_scores_location,review_scores_value
+1001,Old Town loft,Petr,8,4.71,4.8,4.52,4.9,4.93,4.97,4.6
+2002,Vinohrady flat,Jana,4,4.95,,4.9,5,5,4.8,4.85
