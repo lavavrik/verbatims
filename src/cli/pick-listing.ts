@@ -1,5 +1,5 @@
 import { mkdir, writeFile } from 'node:fs/promises';
-import { franc } from 'franc';
+import { detectLanguage } from '../lang';
 import { rankCandidates } from '../pipeline/pickListing';
 import { loadListings, loadReviews } from '../raw';
 
@@ -14,7 +14,7 @@ if (chooseIdx > -1) {
   await writeFile('decisions/listing.json', JSON.stringify({ listingId, chosenAt: new Date().toISOString().slice(0, 10) }, null, 2) + '\n');
   console.log(`Chose listing ${listingId} (${listings.get(listingId)?.name ?? 'unknown name'}). Next: npm run sample`);
 } else {
-  const ranked = rankCandidates(reviews, (t) => franc(t, { minLength: 20 })).slice(0, 10);
+  const ranked = rankCandidates(reviews, detectLanguage).slice(0, 10);
   if (ranked.length === 0) console.log('No listing meets every rule. Loosen PICK_RULES in src/pipeline/pickListing.ts.');
   console.table(ranked.map((c) => ({
     listing: c.listingId,
