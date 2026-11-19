@@ -1,0 +1,5 @@
+[
+  { "id": "Q1", "text": "Considering only months with at least 8 reviews, which rating category had a monthly average furthest below its overall average, and in which month?" },
+  { "id": "Q2", "text": "Cleanliness ratings dropped in June 2026. Why? Support each reason with reviews from that month." },
+  { "id": "Q3", "text": "What do guests complain about most across the whole period?" }
+]
