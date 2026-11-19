@@ -1,0 +1,399 @@
+[
+  {
+    "id": "r0008",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0022",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0036",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0050",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0064",
+    "original": {
+      "overall": 2,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 3,
+      "communication": 2,
+      "location": 2,
+      "value": 4
+    },
+    "corrected": {
+      "location": 3,
+      "communication": 1
+    }
+  },
+  {
+    "id": "r0078",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0092",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0106",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0120",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0134",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0148",
+    "original": {
+      "overall": 2,
+      "cleanliness": 2,
+      "accuracy": 2,
+      "checkin": 3,
+      "communication": 3,
+      "location": 4,
+      "value": 2
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0162",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0176",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0190",
+    "original": {
+      "overall": 3,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 5,
+      "location": 5,
+      "value": 3
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0204",
+    "original": {
+      "overall": 3,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 3
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0218",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0232",
+    "original": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "corrected": {
+      "cleanliness": 2
+    }
+  },
+  {
+    "id": "r0246",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0260",
+    "original": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0274",
+    "original": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0288",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0302",
+    "original": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0316",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 4,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {
+      "overall": 4
+    }
+  },
+  {
+    "id": "r0330",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0344",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0358",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0372",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0386",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0400",
+    "original": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  },
+  {
+    "id": "r0414",
+    "original": {
+      "overall": 5,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "corrected": {}
+  }
+]

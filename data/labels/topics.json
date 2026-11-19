@@ -1,0 +1,831 @@
+{
+  "r0030": {
+    "topics": [
+      "location",
+      "cleanliness",
+      "host communication"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:46:09.799Z"
+  },
+  "r0042": {
+    "topics": [
+      "host communication",
+      "location",
+      "cleanliness"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:46:26.096Z"
+  },
+  "r0047": {
+    "topics": [
+      "location",
+      "host communication",
+      "cleanliness"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:46:42.334Z"
+  },
+  "r0069": {
+    "topics": [
+      "check-in",
+      "cleanliness",
+      "accuracy vs listing",
+      "comfort and beds",
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:47:19.354Z"
+  },
+  "r0088": {
+    "topics": [
+      "location",
+      "host communication",
+      "cleanliness",
+      "kitchen and amenities"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:47:42.642Z"
+  },
+  "r0114": {
+    "topics": [
+      "cleanliness",
+      "host communication",
+      "accuracy vs listing",
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:48:21.307Z"
+  },
+  "r0118": {
+    "topics": [
+      "comfort and beds",
+      "noise",
+      "cleanliness",
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:48:42.721Z"
+  },
+  "r0130": {
+    "topics": [
+      "location",
+      "cleanliness"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:48:52.815Z"
+  },
+  "r0133": {
+    "topics": [
+      "location",
+      "cleanliness",
+      "value for money"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:49:09.714Z"
+  },
+  "r0143": {
+    "topics": [
+      "host communication",
+      "location",
+      "kitchen and amenities",
+      "cleanliness"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:49:39.670Z"
+  },
+  "r0149": {
+    "topics": [
+      "location",
+      "host communication",
+      "cleanliness"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:49:54.640Z"
+  },
+  "r0153": {
+    "topics": [
+      "check-in",
+      "cleanliness"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:50:03.265Z"
+  },
+  "r0160": {
+    "topics": [
+      "cleanliness"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:50:07.188Z"
+  },
+  "r0161": {
+    "topics": [
+      "cleanliness"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:50:13.398Z"
+  },
+  "r0171": {
+    "topics": [
+      "cleanliness",
+      "host communication"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:50:32.374Z"
+  },
+  "r0177": {
+    "topics": [
+      "location",
+      "cleanliness",
+      "value for money"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:50:46.557Z"
+  },
+  "r0182": {
+    "topics": [
+      "location",
+      "cleanliness",
+      "comfort and beds",
+      "noise",
+      "accuracy vs listing"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:51:35.848Z"
+  },
+  "r0184": {
+    "topics": [
+      "cleanliness",
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:51:39.013Z"
+  },
+  "r0195": {
+    "topics": [
+      "value for money",
+      "location",
+      "accuracy vs listing",
+      "cleanliness",
+      "noise",
+      "host communication"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:52:02.858Z"
+  },
+  "r0199": {
+    "topics": [
+      "value for money",
+      "check-in",
+      "cleanliness",
+      "comfort and beds"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:52:22.516Z"
+  },
+  "r0232": {
+    "topics": [
+      "host communication",
+      "cleanliness"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:52:35.926Z"
+  },
+  "r0247": {
+    "topics": [
+      "accuracy vs listing",
+      "host communication",
+      "location",
+      "noise"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:52:54.512Z"
+  },
+  "r0252": {
+    "topics": [
+      "value for money",
+      "cleanliness"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:53:03.183Z"
+  },
+  "r0262": {
+    "topics": [
+      "value for money",
+      "location",
+      "cleanliness"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:53:12.026Z"
+  },
+  "r0265": {
+    "topics": [
+      "cleanliness",
+      "kitchen and amenities",
+      "host communication"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:54:27.710Z"
+  },
+  "r0004": {
+    "topics": [
+      "host communication",
+      "accuracy vs listing",
+      "location",
+      "cleanliness",
+      "value for money"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:54:48.380Z"
+  },
+  "r0011": {
+    "topics": [
+      "accuracy vs listing",
+      "cleanliness",
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:54:54.793Z"
+  },
+  "r0016": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:55:05.511Z"
+  },
+  "r0024": {
+    "topics": [
+      "host communication"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:55:25.125Z"
+  },
+  "r0032": {
+    "topics": [
+      "cleanliness",
+      "comfort and beds"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:55:34.065Z"
+  },
+  "r0037": {
+    "topics": [
+      "check-in",
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:55:50.828Z"
+  },
+  "r0044": {
+    "topics": [
+      "host communication",
+      "location",
+      "comfort and beds",
+      "value for money"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:56:26.230Z"
+  },
+  "r0053": {
+    "topics": [
+      "cleanliness",
+      "comfort and beds",
+      "host communication"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:56:34.780Z"
+  },
+  "r0059": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:56:41.733Z"
+  },
+  "r0071": {
+    "topics": [
+      "comfort and beds",
+      "location",
+      "value for money"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:56:54.985Z"
+  },
+  "r0081": {
+    "topics": [
+      "host communication",
+      "check-in",
+      "comfort and beds"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:57:18.679Z"
+  },
+  "r0086": {
+    "topics": [
+      "location",
+      "cleanliness",
+      "wi-fi and work",
+      "host communication",
+      "comfort and beds"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:57:43.805Z"
+  },
+  "r0092": {
+    "topics": [
+      "location",
+      "check-in"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:57:49.123Z"
+  },
+  "r0098": {
+    "topics": [
+      "accuracy vs listing",
+      "location",
+      "wi-fi and work"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:58:02.737Z"
+  },
+  "r0103": {
+    "topics": [
+      "host communication",
+      "accuracy vs listing",
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:58:17.220Z"
+  },
+  "r0108": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:58:29.603Z"
+  },
+  "r0116": {
+    "topics": [
+      "location",
+      "value for money"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:58:39.540Z"
+  },
+  "r0125": {
+    "topics": [
+      "location",
+      "host communication"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:58:44.054Z"
+  },
+  "r0134": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:58:50.656Z"
+  },
+  "r0140": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:58:59.333Z"
+  },
+  "r0151": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:59:09.451Z"
+  },
+  "r0157": {
+    "topics": [
+      "value for money"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:59:23.746Z"
+  },
+  "r0166": {
+    "topics": [
+      "location",
+      "comfort and beds"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:59:34.404Z"
+  },
+  "r0175": {
+    "topics": [
+      "value for money"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T17:59:41.889Z"
+  },
+  "r0181": {
+    "topics": [
+      "host communication",
+      "check-in",
+      "cleanliness",
+      "accuracy vs listing",
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:00:01.037Z"
+  },
+  "r0194": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:00:08.485Z"
+  },
+  "r0204": {
+    "topics": [
+      "cleanliness"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:00:32.614Z"
+  },
+  "r0217": {
+    "topics": [],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:00:41.202Z"
+  },
+  "r0228": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:00:52.422Z"
+  },
+  "r0234": {
+    "topics": [
+      "comfort and beds",
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:01:10.251Z"
+  },
+  "r0248": {
+    "topics": [
+      "comfort and beds",
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:01:16.258Z"
+  },
+  "r0259": {
+    "topics": [
+      "location",
+      "host communication"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:01:21.561Z"
+  },
+  "r0269": {
+    "topics": [
+      "location",
+      "comfort and beds",
+      "host communication"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:01:47.309Z"
+  },
+  "r0276": {
+    "topics": [
+      "location",
+      "host communication"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:01:54.719Z"
+  },
+  "r0284": {
+    "topics": [
+      "value for money",
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:02:23.086Z"
+  },
+  "r0293": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:02:25.718Z"
+  },
+  "r0298": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:02:28.973Z"
+  },
+  "r0309": {
+    "topics": [
+      "accuracy vs listing",
+      "location",
+      "value for money"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:02:35.649Z"
+  },
+  "r0321": {
+    "topics": [
+      "cleanliness",
+      "comfort and beds",
+      "host communication"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:02:51.676Z"
+  },
+  "r0326": {
+    "topics": [],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:02:55.411Z"
+  },
+  "r0350": {
+    "topics": [
+      "location",
+      "comfort and beds",
+      "noise"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:03:01.667Z"
+  },
+  "r0367": {
+    "topics": [
+      "location",
+      "host communication"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:03:07.877Z"
+  },
+  "r0384": {
+    "topics": [
+      "value for money"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:03:12.984Z"
+  },
+  "r0398": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:03:18.684Z"
+  },
+  "r0414": {
+    "topics": [
+      "location",
+      "accuracy vs listing",
+      "cleanliness"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:03:40.307Z"
+  },
+  "r0021": {
+    "topics": [
+      "location",
+      "host communication"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:04:01.397Z"
+  },
+  "r0076": {
+    "topics": [
+      "cleanliness",
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:04:20.740Z"
+  },
+  "r0212": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:04:29.381Z"
+  },
+  "r0253": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:04:55.654Z"
+  },
+  "r0302": {
+    "topics": [
+      "location",
+      "comfort and beds"
+    ],
+    "viaTranslation": false,
+    "labelledAt": "2026-11-19T18:05:31.046Z"
+  },
+  "r0264": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:05:59.450Z"
+  },
+  "r0077": {
+    "topics": [
+      "check-in",
+      "location"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:06:15.635Z"
+  },
+  "r0207": {
+    "topics": [
+      "check-in",
+      "location"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:06:26.038Z"
+  },
+  "r0369": {
+    "topics": [
+      "value for money",
+      "host communication"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:06:38.113Z"
+  },
+  "r0383": {
+    "topics": [
+      "host communication",
+      "check-in",
+      "location"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:06:53.901Z"
+  },
+  "r0413": {
+    "topics": [
+      "location",
+      "kitchen and amenities"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:07:05.954Z"
+  },
+  "r0046": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:07:14.625Z"
+  },
+  "r0169": {
+    "topics": [
+      "cleanliness",
+      "location",
+      "noise",
+      "host communication"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:07:32.085Z"
+  },
+  "r0213": {
+    "topics": [
+      "location",
+      "host communication"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:07:43.920Z"
+  },
+  "r0238": {
+    "topics": [
+      "location",
+      "noise"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:08:06.669Z"
+  },
+  "r0288": {
+    "topics": [
+      "location",
+      "host communication"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:08:16.809Z"
+  },
+  "r0338": {
+    "topics": [
+      "cleanliness",
+      "location",
+      "check-in",
+      "comfort and beds",
+      "accuracy vs listing"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:08:56.418Z"
+  },
+  "r0361": {
+    "topics": [],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:09:10.211Z"
+  },
+  "r0408": {
+    "topics": [
+      "host communication",
+      "check-in"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:09:24.378Z"
+  },
+  "r0065": {
+    "topics": [
+      "location",
+      "wi-fi and work"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:09:59.330Z"
+  },
+  "r0245": {
+    "topics": [
+      "location",
+      "noise",
+      "comfort and beds"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:10:28.746Z"
+  },
+  "r0316": {
+    "topics": [
+      "noise",
+      "comfort and beds"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:11:06.308Z"
+  },
+  "r0337": {
+    "topics": [
+      "comfort and beds"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:11:14.850Z"
+  },
+  "r0396": {
+    "topics": [
+      "location",
+      "check-in",
+      "kitchen and amenities"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:11:40.553Z"
+  },
+  "r0165": {
+    "topics": [
+      "location",
+      "cleanliness",
+      "value for money"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:12:04.389Z"
+  },
+  "r0268": {
+    "topics": [
+      "comfort and beds",
+      "cleanliness",
+      "host communication"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:12:19.606Z"
+  },
+  "r0341": {
+    "topics": [
+      "cleanliness",
+      "location",
+      "comfort and beds",
+      "accuracy vs listing",
+      "value for money"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:12:38.537Z"
+  },
+  "r0356": {
+    "topics": [],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:12:45.947Z"
+  },
+  "r0372": {
+    "topics": [
+      "location"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:12:53.920Z"
+  },
+  "r0403": {
+    "topics": [
+      "location",
+      "value for money"
+    ],
+    "viaTranslation": true,
+    "labelledAt": "2026-11-19T18:13:25.691Z"
+  }
+}

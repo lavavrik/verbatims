@@ -1,0 +1,3797 @@
+{
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "promptVersion": "v1",
+  "prompt": "You read one guest review of an Airbnb listing and give the star ratings this guest would most likely have given on Airbnb, from 1 to 5 whole stars.\n\nCategories:\n- overall: the stay as a whole\n- cleanliness: how clean the place was\n- accuracy: how well the place matched the listing description and photos\n- checkin: how smooth arrival and key handover were\n- communication: how responsive and helpful the host was\n- location: the neighbourhood, transport and surroundings\n- value: whether the stay was worth the price\n\nRate from the review text only. When a category is not mentioned, follow the review's overall tone. Reviews may be in any language. Ignore \"[name]\" placeholders; they replace people's names.",
+  "results": {
+    "r0001": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0003": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0004": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 5
+    },
+    "r0002": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0008": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0005": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0006": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0007": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0009": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0011": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0010": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0012": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0013": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0014": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0015": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 5
+    },
+    "r0016": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0018": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0017": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0019": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0020": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0021": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0023": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0024": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0025": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0026": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0027": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0022": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0029": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0031": {
+      "overall": 3,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 3,
+      "communication": 3,
+      "location": 5,
+      "value": 3
+    },
+    "r0030": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0028": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0035": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0033": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0032": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0034": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0036": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0037": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0038": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0039": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0041": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0040": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0043": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0042": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0044": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0045": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0046": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0047": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0048": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0051": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0050": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0049": {
+      "overall": 3,
+      "cleanliness": 4,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 3
+    },
+    "r0052": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0055": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0053": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0054": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0056": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0057": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0058": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0059": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0060": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0062": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0061": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0063": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0064": {
+      "overall": 2,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 3,
+      "communication": 2,
+      "location": 2,
+      "value": 4
+    },
+    "r0066": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0065": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0067": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0068": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0069": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0070": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0071": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0072": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0073": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0074": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0076": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0075": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0077": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0079": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0078": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0080": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0081": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0082": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0083": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0084": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0085": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0086": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0087": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0088": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0091": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0089": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0092": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0093": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0094": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0090": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0097": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0095": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0096": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0098": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0100": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0099": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0101": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 4,
+      "location": 5,
+      "value": 5
+    },
+    "r0102": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0103": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 3,
+      "value": 4
+    },
+    "r0104": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0105": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0106": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0107": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0108": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0109": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0110": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0111": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0113": {
+      "overall": 5,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0112": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0114": {
+      "overall": 3,
+      "cleanliness": 1,
+      "accuracy": 3,
+      "checkin": 3,
+      "communication": 5,
+      "location": 4,
+      "value": 3
+    },
+    "r0115": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0117": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0116": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 5
+    },
+    "r0118": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0119": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0120": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0121": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0122": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0123": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 3,
+      "value": 4
+    },
+    "r0124": {
+      "overall": 3,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 3
+    },
+    "r0125": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0126": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0127": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0128": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 5
+    },
+    "r0129": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0131": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0130": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0132": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0133": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0134": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0135": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0137": {
+      "overall": 5,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0138": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0136": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0139": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0141": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0140": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0142": {
+      "overall": 3,
+      "cleanliness": 2,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 3
+    },
+    "r0143": {
+      "overall": 3,
+      "cleanliness": 2,
+      "accuracy": 3,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 3
+    },
+    "r0144": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0145": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0146": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0147": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0148": {
+      "overall": 2,
+      "cleanliness": 2,
+      "accuracy": 2,
+      "checkin": 3,
+      "communication": 3,
+      "location": 4,
+      "value": 2
+    },
+    "r0149": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0151": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 3,
+      "value": 4
+    },
+    "r0152": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0153": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0154": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0155": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0156": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0157": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 5
+    },
+    "r0150": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0158": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0159": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0161": {
+      "overall": 2,
+      "cleanliness": 1,
+      "accuracy": 2,
+      "checkin": 3,
+      "communication": 3,
+      "location": 3,
+      "value": 2
+    },
+    "r0160": {
+      "overall": 3,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 3
+    },
+    "r0162": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0163": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0164": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0165": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0166": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0167": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0168": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0169": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0170": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0171": {
+      "overall": 1,
+      "cleanliness": 1,
+      "accuracy": 1,
+      "checkin": 2,
+      "communication": 1,
+      "location": 2,
+      "value": 1
+    },
+    "r0172": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0174": {
+      "overall": 1,
+      "cleanliness": 1,
+      "accuracy": 1,
+      "checkin": 2,
+      "communication": 1,
+      "location": 3,
+      "value": 1
+    },
+    "r0173": {
+      "overall": 3,
+      "cleanliness": 1,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 5,
+      "location": 5,
+      "value": 3
+    },
+    "r0175": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0176": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0178": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0177": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0179": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0180": {
+      "overall": 1,
+      "cleanliness": 2,
+      "accuracy": 2,
+      "checkin": 3,
+      "communication": 1,
+      "location": 4,
+      "value": 2
+    },
+    "r0181": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0182": {
+      "overall": 2,
+      "cleanliness": 1,
+      "accuracy": 2,
+      "checkin": 2,
+      "communication": 2,
+      "location": 3,
+      "value": 2
+    },
+    "r0184": {
+      "overall": 3,
+      "cleanliness": 2,
+      "accuracy": 3,
+      "checkin": 3,
+      "communication": 3,
+      "location": 5,
+      "value": 3
+    },
+    "r0186": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0183": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0185": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 5
+    },
+    "r0187": {
+      "overall": 3,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 3,
+      "value": 3
+    },
+    "r0188": {
+      "overall": 3,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 3,
+      "communication": 3,
+      "location": 3,
+      "value": 3
+    },
+    "r0189": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0190": {
+      "overall": 3,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 5,
+      "location": 5,
+      "value": 3
+    },
+    "r0191": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 5
+    },
+    "r0192": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0194": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0195": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0193": {
+      "overall": 3,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 2,
+      "value": 4
+    },
+    "r0196": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0198": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0197": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0200": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0202": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0203": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 5
+    },
+    "r0199": {
+      "overall": 1,
+      "cleanliness": 1,
+      "accuracy": 2,
+      "checkin": 4,
+      "communication": 2,
+      "location": 4,
+      "value": 1
+    },
+    "r0201": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0204": {
+      "overall": 3,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 3
+    },
+    "r0206": {
+      "overall": 2,
+      "cleanliness": 2,
+      "accuracy": 2,
+      "checkin": 3,
+      "communication": 3,
+      "location": 5,
+      "value": 2
+    },
+    "r0207": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0205": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0210": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0209": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0208": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0211": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0214": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0213": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0215": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 5
+    },
+    "r0212": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0216": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0217": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0218": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0219": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 3,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0220": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0222": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0221": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0223": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0224": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0226": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0227": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0225": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0228": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0229": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 5
+    },
+    "r0231": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0230": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0232": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0233": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0235": {
+      "overall": 3,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 2,
+      "communication": 3,
+      "location": 4,
+      "value": 3
+    },
+    "r0234": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0236": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0237": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0239": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0238": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0241": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0240": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0242": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 5
+    },
+    "r0243": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 5
+    },
+    "r0245": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0244": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0246": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0247": {
+      "overall": 3,
+      "cleanliness": 2,
+      "accuracy": 3,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 3
+    },
+    "r0248": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0249": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0250": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0251": {
+      "overall": 3,
+      "cleanliness": 4,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 2,
+      "value": 4
+    },
+    "r0253": {
+      "overall": 3,
+      "cleanliness": 4,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 3,
+      "value": 4
+    },
+    "r0254": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0252": {
+      "overall": 3,
+      "cleanliness": 2,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0255": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0257": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0258": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0256": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0259": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0260": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0261": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0262": {
+      "overall": 5,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0263": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 5
+    },
+    "r0264": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0266": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 5
+    },
+    "r0267": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0268": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0270": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0271": {
+      "overall": 3,
+      "cleanliness": 2,
+      "accuracy": 3,
+      "checkin": 5,
+      "communication": 4,
+      "location": 5,
+      "value": 3
+    },
+    "r0272": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0269": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0273": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0265": {
+      "overall": 1,
+      "cleanliness": 1,
+      "accuracy": 2,
+      "checkin": 3,
+      "communication": 1,
+      "location": 3,
+      "value": 2
+    },
+    "r0274": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0275": {
+      "overall": 2,
+      "cleanliness": 2,
+      "accuracy": 2,
+      "checkin": 5,
+      "communication": 2,
+      "location": 3,
+      "value": 3
+    },
+    "r0276": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 5
+    },
+    "r0277": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0279": {
+      "overall": 2,
+      "cleanliness": 2,
+      "accuracy": 2,
+      "checkin": 3,
+      "communication": 3,
+      "location": 3,
+      "value": 3
+    },
+    "r0278": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 5
+    },
+    "r0280": {
+      "overall": 3,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 3,
+      "value": 4
+    },
+    "r0281": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0282": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0283": {
+      "overall": 2,
+      "cleanliness": 2,
+      "accuracy": 2,
+      "checkin": 3,
+      "communication": 3,
+      "location": 4,
+      "value": 2
+    },
+    "r0284": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0285": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0287": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0288": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0289": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 3,
+      "value": 4
+    },
+    "r0286": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0290": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0291": {
+      "overall": 3,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 3
+    },
+    "r0292": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0293": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0294": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0296": {
+      "overall": 2,
+      "cleanliness": 2,
+      "accuracy": 2,
+      "checkin": 4,
+      "communication": 2,
+      "location": 4,
+      "value": 3
+    },
+    "r0297": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0298": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0299": {
+      "overall": 3,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 3,
+      "value": 3
+    },
+    "r0300": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0295": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0301": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0302": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0303": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0306": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0305": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0304": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0308": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0309": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0307": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0310": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0311": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0312": {
+      "overall": 1,
+      "cleanliness": 3,
+      "accuracy": 2,
+      "checkin": 3,
+      "communication": 1,
+      "location": 4,
+      "value": 1
+    },
+    "r0313": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0314": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0315": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0316": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 4,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0317": {
+      "overall": 2,
+      "cleanliness": 2,
+      "accuracy": 2,
+      "checkin": 4,
+      "communication": 3,
+      "location": 4,
+      "value": 2
+    },
+    "r0318": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0319": {
+      "overall": 3,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 3
+    },
+    "r0320": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0321": {
+      "overall": 1,
+      "cleanliness": 1,
+      "accuracy": 2,
+      "checkin": 3,
+      "communication": 4,
+      "location": 3,
+      "value": 1
+    },
+    "r0322": {
+      "overall": 2,
+      "cleanliness": 1,
+      "accuracy": 2,
+      "checkin": 3,
+      "communication": 3,
+      "location": 4,
+      "value": 2
+    },
+    "r0323": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0324": {
+      "overall": 3,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 3
+    },
+    "r0326": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0325": {
+      "overall": 5,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 5
+    },
+    "r0327": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0328": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 5
+    },
+    "r0330": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0329": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0331": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0332": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0333": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0334": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0335": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0336": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0337": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0338": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0339": {
+      "overall": 1,
+      "cleanliness": 1,
+      "accuracy": 2,
+      "checkin": 2,
+      "communication": 2,
+      "location": 2,
+      "value": 1
+    },
+    "r0340": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0341": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0342": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0343": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0344": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0346": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0345": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0347": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0348": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0349": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0350": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0351": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 4,
+      "location": 4,
+      "value": 5
+    },
+    "r0353": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0352": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0354": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0355": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0356": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0357": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0358": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0359": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0360": {
+      "overall": 4,
+      "cleanliness": 2,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0362": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0363": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0364": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0366": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0367": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0361": {
+      "overall": 3,
+      "cleanliness": 4,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 3
+    },
+    "r0365": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0369": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0368": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 4
+    },
+    "r0370": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0371": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0372": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0373": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0374": {
+      "overall": 5,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0375": {
+      "overall": 2,
+      "cleanliness": 3,
+      "accuracy": 3,
+      "checkin": 3,
+      "communication": 2,
+      "location": 3,
+      "value": 2
+    },
+    "r0376": {
+      "overall": 4,
+      "cleanliness": 5,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 4
+    },
+    "r0378": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0377": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0379": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0380": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0381": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0382": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0383": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0384": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0385": {
+      "overall": 2,
+      "cleanliness": 2,
+      "accuracy": 2,
+      "checkin": 3,
+      "communication": 3,
+      "location": 3,
+      "value": 2
+    },
+    "r0386": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0387": {
+      "overall": 2,
+      "cleanliness": 1,
+      "accuracy": 2,
+      "checkin": 3,
+      "communication": 3,
+      "location": 4,
+      "value": 2
+    },
+    "r0388": {
+      "overall": 3,
+      "cleanliness": 4,
+      "accuracy": 3,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 3
+    },
+    "r0389": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0390": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0391": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0392": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0393": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0395": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0394": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0396": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0399": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0397": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0398": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0400": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0402": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0401": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0403": {
+      "overall": 5,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0404": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0406": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0405": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0407": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0408": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0409": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0410": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0411": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0412": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0413": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0414": {
+      "overall": 5,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0415": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 4,
+      "checkin": 4,
+      "communication": 4,
+      "location": 5,
+      "value": 5
+    },
+    "r0416": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    },
+    "r0417": {
+      "overall": 4,
+      "cleanliness": 3,
+      "accuracy": 4,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 4
+    },
+    "r0418": {
+      "overall": 4,
+      "cleanliness": 4,
+      "accuracy": 5,
+      "checkin": 4,
+      "communication": 4,
+      "location": 4,
+      "value": 4
+    },
+    "r0419": {
+      "overall": 3,
+      "cleanliness": 4,
+      "accuracy": 2,
+      "checkin": 4,
+      "communication": 5,
+      "location": 3,
+      "value": 3
+    },
+    "r0420": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 4,
+      "value": 5
+    },
+    "r0421": {
+      "overall": 5,
+      "cleanliness": 5,
+      "accuracy": 5,
+      "checkin": 5,
+      "communication": 5,
+      "location": 5,
+      "value": 5
+    }
+  }
+}

@@ -27,7 +27,22 @@ Airbnb's dataset. Full credit and the list of changes: [LICENSE-DATA.md](LICENSE
 Inside Airbnb publishes the listing's real average sub-scores. Comparing them with the
 averages of the generated ratings is a sanity check on the generation:
 
-_Filled in after the first full build (`npm run build` prints the table)._
+| | Generated (421 reviews) | Airbnb (listing average) | Difference |
+|---|---|---|---|
+| overall | 4.43 | 4.24 | +0.19 |
+| cleanliness | 4.39 | 4.08 | +0.31 |
+| accuracy | 4.48 | 4.61 | −0.13 |
+| checkin | 4.71 | 4.84 | −0.13 |
+| communication | 4.69 | 4.75 | −0.06 |
+| location | 4.72 | 4.59 | +0.13 |
+| value | 4.52 | 4.50 | +0.02 |
+
+Every category is within a third of a star. The generator is somewhat more generous than
+real guests on cleanliness and overall, which fits the fact that it can only react to what
+a review says, while unhappy guests often rate low without explaining why. Airbnb's
+averages cover all of the listing's reviews, the generated ones only this sample. In the
+owner's spot check of 30 reviews, 27 were accepted exactly as generated and 3 were
+corrected (corrections are marked `"owner"` in `ratings_source`).
 
 ## Files
 
