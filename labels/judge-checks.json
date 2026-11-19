@@ -1,0 +1,146 @@
+[
+  {
+    "resultFile": "results/2026-11-19-answer-claude-haiku-5-5-answer-v1.json",
+    "outputIndex": 5,
+    "claimIndex": 0,
+    "reviewId": "r0130",
+    "judge": true,
+    "owner": true
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-haiku-5-5-answer-v1.json",
+    "outputIndex": 8,
+    "claimIndex": 4,
+    "reviewId": "r0265",
+    "judge": true,
+    "owner": true
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-haiku-5-5-answer-v1.json",
+    "outputIndex": 8,
+    "claimIndex": 0,
+    "reviewId": "r0321",
+    "judge": true,
+    "owner": true
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-haiku-5-5-answer-v1.json",
+    "outputIndex": 8,
+    "claimIndex": 0,
+    "reviewId": "r0182",
+    "judge": true,
+    "owner": true
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-haiku-5-5-answer-v1.json",
+    "outputIndex": 7,
+    "claimIndex": 2,
+    "reviewId": "r0204",
+    "judge": true,
+    "owner": true
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-sonnet-5-5-answer-v1.json",
+    "outputIndex": 8,
+    "claimIndex": 1,
+    "reviewId": "r0284",
+    "judge": true,
+    "owner": true
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-sonnet-5-5-answer-v1.json",
+    "outputIndex": 8,
+    "claimIndex": 1,
+    "reviewId": "r0405",
+    "judge": true,
+    "owner": true
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-sonnet-5-5-answer-v1.json",
+    "outputIndex": 7,
+    "claimIndex": 1,
+    "reviewId": "r0275",
+    "judge": true,
+    "owner": true
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-sonnet-5-5-answer-v1.json",
+    "outputIndex": 7,
+    "claimIndex": 5,
+    "reviewId": "r0199",
+    "judge": false,
+    "owner": false
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-haiku-5-5-answer-v1.json",
+    "outputIndex": 5,
+    "claimIndex": 2,
+    "reviewId": "r0153",
+    "judge": true,
+    "owner": true
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-haiku-5-5-answer-v1.json",
+    "outputIndex": 7,
+    "claimIndex": 2,
+    "reviewId": "r0271",
+    "judge": true,
+    "owner": true
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-haiku-5-5-answer-v1.json",
+    "outputIndex": 5,
+    "claimIndex": 0,
+    "reviewId": "r0088",
+    "judge": false,
+    "owner": false
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-sonnet-5-5-answer-v1.json",
+    "outputIndex": 5,
+    "claimIndex": 0,
+    "reviewId": "r0130",
+    "judge": false,
+    "owner": true
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-haiku-5-5-answer-v1.json",
+    "outputIndex": 5,
+    "claimIndex": 0,
+    "reviewId": "r0409",
+    "judge": false,
+    "owner": false
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-haiku-5-5-answer-v1.json",
+    "outputIndex": 8,
+    "claimIndex": 5,
+    "reviewId": "r0180",
+    "judge": false,
+    "owner": true
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-sonnet-5-5-answer-v1.json",
+    "outputIndex": 3,
+    "claimIndex": 0,
+    "reviewId": "r0130",
+    "judge": false,
+    "owner": true
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-haiku-5-5-answer-v1.json",
+    "outputIndex": 6,
+    "claimIndex": 4,
+    "reviewId": "r0340",
+    "judge": false,
+    "owner": false
+  },
+  {
+    "resultFile": "results/2026-11-19-answer-claude-haiku-5-5-answer-v1.json",
+    "outputIndex": 8,
+    "claimIndex": 3,
+    "reviewId": "r0340",
+    "judge": false,
+    "owner": true
+  }
+]
