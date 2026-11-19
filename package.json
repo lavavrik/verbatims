@@ -24,7 +24,8 @@
     "eval:metrics": "tsx --env-file-if-exists=.env src/cli/eval-metrics.ts",
     "eval:answer": "tsx --env-file-if-exists=.env src/cli/eval-answer.ts",
     "eval:judge-check": "tsx --env-file-if-exists=.env src/cli/eval-judge-check.ts",
-    "eval:compare": "tsx --env-file-if-exists=.env src/cli/eval-compare.ts"
+    "eval:compare": "tsx --env-file-if-exists=.env src/cli/eval-compare.ts",
+    "eval:export": "tsx --env-file-if-exists=.env src/cli/eval-export.ts"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",

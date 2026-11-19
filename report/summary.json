@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-19T20:40:46.549Z",
+  "datasetHash": "7df9bd6b92eb7298f897cf9caf06805d2ef984390c78465b12310ad919c30e87",
+  "splitHash": "8c4c7e4c2ec32c18",
+  "dataset": {
+    "listingId": "6264096",
+    "reviews": 421,
+    "languages": {
+      "ces": 2,
+      "eng": 265,
+      "rus": 12,
+      "nld": 7,
+      "hrv": 2,
+      "deu": 28,
+      "fra": 41,
+      "spa": 25,
+      "kor": 4,
+      "ita": 15,
+      "cmn": 1,
+      "hun": 3,
+      "por": 4,
+      "slk": 2,
+      "swe": 2,
+      "bul": 1,
+      "tur": 1,
+      "cat": 1,
+      "dan": 1,
+      "pol": 3,
+      "fin": 1
+    },
+    "labelled": 100,
+    "split": {
+      "dev": 37,
+      "test": 38,
+      "added": 25
+    },
+    "plantedTrend": {
+      "month": "2026-06",
+      "category": "cleanliness",
+      "reviews": 15
+    }
+  },
+  "classify": [
+    {
+      "file": "results/2026-11-19-classify-claude-haiku-5-5-v1.json",
+      "model": "claude-haiku-5-5",
+      "prompt": "v1",
+      "costUsd": 0.07901070000000002,
+      "test": {
+        "n": 38,
+        "exactSet": {
+          "k": 13,
+          "n": 38,
+          "rate": 0.34210526315789475,
+          "low": 0.21212220026458956,
+          "high": 0.5010818837092545
+        },
+        "microF1": 0.7922705314009663
+      },
+      "dev": {
+        "n": 37,
+        "exactSet": {
+          "k": 17,
+          "n": 37,
+          "rate": 0.4594594594594595,
+          "low": 0.31038327828457724,
+          "high": 0.6161622047523264
+        },
+        "microF1": 0.778443113772455
+      },
+      "consistency": {
+        "n": 100,
+        "stable": {
+          "k": 68,
+          "n": 100,
+          "rate": 0.68,
+          "low": 0.5833719774632081,
+          "high": 0.7633098918454312
+        },
+        "meanJaccard": 0.9469142857142857
+      },
+      "avgTopicsPerReview": 3.2,
+      "ownerAvgTopicsPerReview": 2.34,
+      "perTopicPrecision": {
+        "cleanliness": 0.7142857142857143,
+        "location": 0.9180327868852459,
+        "host communication": 0.8333333333333334,
+        "check-in": 0.6923076923076923,
+        "noise": 0.7142857142857143,
+        "comfort and beds": 0.5,
+        "kitchen and amenities": 0.11764705882352941,
+        "value for money": 0.65,
+        "accuracy vs listing": 0.4090909090909091,
+        "wi-fi and work": 0.75
+      }
+    },
+    {
+      "file": "results/2026-11-19-classify-claude-haiku-5-5-v2.json",
+      "model": "claude-haiku-5-5",
+      "prompt": "v2",
+      "costUsd": 0.1043671,
+      "test": {
+        "n": 38,
+        "exactSet": {
+          "k": 9,
+          "n": 38,
+          "rate": 0.23684210526315788,
+          "low": 0.12993561496969508,
+          "high": 0.39207119165337856
+        },
+        "microF1": 0.7383177570093459
+      },
+      "dev": {
+        "n": 37,
+        "exactSet": {
+          "k": 12,
+          "n": 37,
+          "rate": 0.32432432432432434,
+          "low": 0.19633077820815478,
+          "high": 0.48536631495176064
+        },
+        "microF1": 0.760233918128655
+      },
+      "consistency": {
+        "n": 100,
+        "stable": {
+          "k": 74,
+          "n": 100,
+          "rate": 0.74,
+          "low": 0.6462882736813838,
+          "high": 0.8159542187301354
+        },
+        "meanJaccard": 0.9517904761904761
+      },
+      "avgTopicsPerReview": 3.35,
+      "ownerAvgTopicsPerReview": 2.34,
+      "perTopicPrecision": {
+        "cleanliness": 0.75,
+        "location": 0.9180327868852459,
+        "host communication": 0.7692307692307693,
+        "check-in": 0.6,
+        "noise": 0.7142857142857143,
+        "comfort and beds": 0.6190476190476191,
+        "kitchen and amenities": 0.1111111111111111,
+        "value for money": 0.6190476190476191,
+        "accuracy vs listing": 0.21621621621621623,
+        "wi-fi and work": 0.75
+      }
+    },
+    {
+      "file": "results/2026-11-19-classify-claude-haiku-5-5-v3.json",
+      "model": "claude-haiku-5-5",
+      "prompt": "v3",
+      "costUsd": 0.1132498,
+      "test": {
+        "n": 38,
+        "exactSet": {
+          "k": 13,
+          "n": 38,
+          "rate": 0.34210526315789475,
+          "low": 0.21212220026458956,
+          "high": 0.5010818837092545
+        },
+        "microF1": 0.7729468599033815
+      },
+      "dev": {
+        "n": 37,
+        "exactSet": {
+          "k": 20,
+          "n": 37,
+          "rate": 0.5405405405405406,
+          "low": 0.38383779524767364,
+          "high": 0.6896167217154228
+        },
+        "microF1": 0.8125000000000001
+      },
+      "consistency": {
+        "n": 100,
+        "stable": {
+          "k": 78,
+          "n": 100,
+          "rate": 0.78,
+          "low": 0.6892946528499969,
+          "high": 0.849988254963442
+        },
+        "meanJaccard": 0.9540214285714285
+      },
+      "avgTopicsPerReview": 3.1,
+      "ownerAvgTopicsPerReview": 2.34,
+      "perTopicPrecision": {
+        "cleanliness": 0.7142857142857143,
+        "location": 0.9180327868852459,
+        "host communication": 0.7692307692307693,
+        "check-in": 0.5625,
+        "noise": 0.625,
+        "comfort and beds": 0.56,
+        "kitchen and amenities": 0.08333333333333333,
+        "value for money": 0.5909090909090909,
+        "accuracy vs listing": 0.5294117647058824,
+        "wi-fi and work": 0.75
+      }
+    },
+    {
+      "file": "results/2026-11-19-classify-claude-sonnet-5-5-v1.json",
+      "model": "claude-sonnet-5-5",
+      "prompt": "v1",
+      "costUsd": 1.152644,
+      "test": {
+        "n": 38,
+        "exactSet": {
+          "k": 11,
+          "n": 38,
+          "rate": 0.2894736842105263,
+          "low": 0.17003106263656131,
+          "high": 0.44757438266189764
+        },
+        "microF1": 0.7555555555555555
+      },
+      "dev": {
+        "n": 37,
+        "exactSet": {
+          "k": 10,
+          "n": 37,
+          "rate": 0.2702702702702703,
+          "low": 0.15397298246990684,
+          "high": 0.4297847547392133
+        },
+        "microF1": 0.7243243243243243
+      },
+      "consistency": {
+        "n": 100,
+        "stable": {
+          "k": 95,
+          "n": 100,
+          "rate": 0.95,
+          "low": 0.8882480347279118,
+          "high": 0.9784566385436864
+        },
+        "meanJaccard": 0.9931666666666666
+      },
+      "avgTopicsPerReview": 3.62,
+      "ownerAvgTopicsPerReview": 2.34,
+      "perTopicPrecision": {
+        "cleanliness": 0.7142857142857143,
+        "location": 0.9032258064516129,
+        "host communication": 0.7586206896551724,
+        "check-in": 0.6666666666666666,
+        "noise": 0.5555555555555556,
+        "comfort and beds": 0.5666666666666667,
+        "kitchen and amenities": 0.06896551724137931,
+        "value for money": 0.6190476190476191,
+        "accuracy vs listing": 0.2571428571428571,
+        "wi-fi and work": 0.75
+      }
+    },
+    {
+      "file": "results/2026-11-19-classify-claude-sonnet-5-5-v2.json",
+      "model": "claude-sonnet-5-5",
+      "prompt": "v2",
+      "costUsd": 1.755962,
+      "test": {
+        "n": 38,
+        "exactSet": {
+          "k": 8,
+          "n": 38,
+          "rate": 0.21052631578947367,
+          "low": 0.1107466035209593,
+          "high": 0.36346088376442165
+        },
+        "microF1": 0.748898678414097
+      },
+      "dev": {
+        "n": 37,
+        "exactSet": {
+          "k": 9,
+          "n": 37,
+          "rate": 0.24324324324324326,
+          "low": 0.13361203432663304,
+          "high": 0.4011760249070895
+        },
+        "microF1": 0.7052631578947368
+      },
+      "consistency": {
+        "n": 100,
+        "stable": {
+          "k": 90,
+          "n": 100,
+          "rate": 0.9,
+          "low": 0.8256326956323347,
+          "high": 0.9447714583868639
+        },
+        "meanJaccard": 0.9864619047619047
+      },
+      "avgTopicsPerReview": 3.73,
+      "ownerAvgTopicsPerReview": 2.34,
+      "perTopicPrecision": {
+        "cleanliness": 0.75,
+        "location": 0.9032258064516129,
+        "host communication": 0.75,
+        "check-in": 0.5882352941176471,
+        "noise": 0.625,
+        "comfort and beds": 0.5625,
+        "kitchen and amenities": 0.08,
+        "value for money": 0.65,
+        "accuracy vs listing": 0.1956521739130435,
+        "wi-fi and work": 0.75
+      }
+    },
+    {
+      "file": "results/2026-11-19-classify-claude-sonnet-5-5-v3.json",
+      "model": "claude-sonnet-5-5",
+      "prompt": "v3",
+      "costUsd": 1.845586,
+      "test": {
+        "n": 38,
+        "exactSet": {
+          "k": 15,
+          "n": 38,
+          "rate": 0.39473684210526316,
+          "low": 0.25597859263618905,
+          "high": 0.5528241300130403
+        },
+        "microF1": 0.8076923076923077
+      },
+      "dev": {
+        "n": 37,
+        "exactSet": {
+          "k": 20,
+          "n": 37,
+          "rate": 0.5405405405405406,
+          "low": 0.38383779524767364,
+          "high": 0.6896167217154228
+        },
+        "microF1": 0.8198757763975156
+      },
+      "consistency": {
+        "n": 100,
+        "stable": {
+          "k": 90,
+          "n": 100,
+          "rate": 0.9,
+          "low": 0.8256326956323347,
+          "high": 0.9447714583868639
+        },
+        "meanJaccard": 0.9870333333333332
+      },
+      "avgTopicsPerReview": 3.18,
+      "ownerAvgTopicsPerReview": 2.34,
+      "perTopicPrecision": {
+        "cleanliness": 0.75,
+        "location": 0.9032258064516129,
+        "host communication": 0.75,
+        "check-in": 0.5294117647058824,
+        "noise": 0.625,
+        "comfort and beds": 0.5666666666666667,
+        "kitchen and amenities": 0.2222222222222222,
+        "value for money": 0.65,
+        "accuracy vs listing": 0.5625,
+        "wi-fi and work": 0.75
+      }
+    }
+  ],
+  "paired": [
+    {
+      "model": "claude-haiku-5-5",
+      "from": "v1",
+      "to": "v2",
+      "subset": "test",
+      "better": 0,
+      "worse": 4,
+      "signTestP": 0.125
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "from": "v1",
+      "to": "v3",
+      "subset": "test",
+      "better": 3,
+      "worse": 3,
+      "signTestP": 1
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "from": "v2",
+      "to": "v3",
+      "subset": "test",
+      "better": 5,
+      "worse": 1,
+      "signTestP": 0.21875
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "from": "v1",
+      "to": "v2",
+      "subset": "test",
+      "better": 0,
+      "worse": 3,
+      "signTestP": 0.25
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "from": "v1",
+      "to": "v3",
+      "subset": "test",
+      "better": 5,
+      "worse": 1,
+      "signTestP": 0.21875
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "from": "v2",
+      "to": "v3",
+      "subset": "test",
+      "better": 7,
+      "worse": 0,
+      "signTestP": 0.015625
+    }
+  ],
+  "pairedStability": [
+    {
+      "a": {
+        "model": "claude-haiku-5-5",
+        "prompt": "v1"
+      },
+      "b": {
+        "model": "claude-haiku-5-5",
+        "prompt": "v3"
+      },
+      "stableOnlyInA": 12,
+      "stableOnlyInB": 22,
+      "signTestP": 0.12144948495551944
+    },
+    {
+      "a": {
+        "model": "claude-haiku-5-5",
+        "prompt": "v2"
+      },
+      "b": {
+        "model": "claude-haiku-5-5",
+        "prompt": "v3"
+      },
+      "stableOnlyInA": 10,
+      "stableOnlyInB": 14,
+      "signTestP": 0.5412561893463135
+    },
+    {
+      "a": {
+        "model": "claude-sonnet-5-5",
+        "prompt": "v1"
+      },
+      "b": {
+        "model": "claude-sonnet-5-5",
+        "prompt": "v3"
+      },
+      "stableOnlyInA": 10,
+      "stableOnlyInB": 5,
+      "signTestP": 0.3017578125
+    },
+    {
+      "a": {
+        "model": "claude-sonnet-5-5",
+        "prompt": "v2"
+      },
+      "b": {
+        "model": "claude-sonnet-5-5",
+        "prompt": "v3"
+      },
+      "stableOnlyInA": 6,
+      "stableOnlyInB": 6,
+      "signTestP": 1
+    },
+    {
+      "a": {
+        "model": "claude-haiku-5-5",
+        "prompt": "v3"
+      },
+      "b": {
+        "model": "claude-sonnet-5-5",
+        "prompt": "v3"
+      },
+      "stableOnlyInA": 6,
+      "stableOnlyInB": 18,
+      "signTestP": 0.022655844688415527
+    }
+  ],
+  "answers": [
+    {
+      "file": "results/2026-11-19-answer-claude-haiku-5-5-answer-v1.json",
+      "model": "claude-haiku-5-5",
+      "costUsd": 0.0595974,
+      "judgeCostUsd": 1.060552,
+      "q1Correct": {
+        "k": 3,
+        "n": 3
+      },
+      "unsupportedClaims": {
+        "Q1": {
+          "k": 0,
+          "n": 7
+        },
+        "Q2": {
+          "k": 0,
+          "n": 20
+        },
+        "Q3": {
+          "k": 0,
+          "n": 20
+        }
+      },
+      "invalidCitations": 0,
+      "q2": {
+        "meanRecall": 0.888888888888889,
+        "meanPrecision": 0.7875,
+        "offMonthRelevant": 0
+      }
+    },
+    {
+      "file": "results/2026-11-19-answer-claude-sonnet-5-5-answer-v1.json",
+      "model": "claude-sonnet-5-5",
+      "costUsd": 1.122778,
+      "judgeCostUsd": 0.981404,
+      "q1Correct": {
+        "k": 3,
+        "n": 3
+      },
+      "unsupportedClaims": {
+        "Q1": {
+          "k": 0,
+          "n": 11
+        },
+        "Q2": {
+          "k": 0,
+          "n": 18
+        },
+        "Q3": {
+          "k": 0,
+          "n": 19
+        }
+      },
+      "invalidCitations": 0,
+      "q2": {
+        "meanRecall": 0.8444444444444444,
+        "meanPrecision": 0.679337231968811,
+        "offMonthRelevant": 0
+      }
+    }
+  ],
+  "judgeAgreement": {
+    "onSupported": {
+      "k": 10,
+      "n": 10
+    },
+    "onUnsupported": {
+      "k": 4,
+      "n": 8
+    }
+  },
+  "totalCostUsd": 8.275151000000001
+}

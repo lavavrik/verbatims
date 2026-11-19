@@ -91,6 +91,9 @@ npm run eval:judge-check                                        # check 20 judge
 npm run eval:compare -- results/<A>.json results/<B>.json
 ```
 
+`npm run eval:export` writes `report/summary.json`: every number the report page on
+lavrentiip.net shows, with the result file it came from and paired sign tests on the test half.
+
 Every run writes `results/<date>-<kind>-<model>-<prompt>.json` with the exact prompt, model,
 settings, every output, token usage and cost; `npm run eval:metrics -- <file>` recomputes the
 numbers from those outputs without calling a model.
