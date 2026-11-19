@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>verbatims labeller</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button data-mode="complaints">Complaints</button>
+        <button data-mode="ratings">Rating check</button>
+        <button data-mode="topics">Topics</button>
+      </nav>
+      <div class="progress"><div id="bar"></div><span id="count"></span></div>
+    </header>
+    <main>
+      <p id="meta"></p>
+      <blockquote id="text"></blockquote>
+      <p id="translation" hidden></p>
+      <button id="translate" hidden>Show English translation</button>
+      <section id="panel"></section>
+      <p id="help"></p>
+      <p id="status"></p>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

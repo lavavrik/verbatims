@@ -14,7 +14,7 @@ const byDate = (a: SourceReview, b: SourceReview) => a.date.localeCompare(b.date
 const quarter = (date: string) => `${date.slice(0, 4)}Q${Math.floor((Number(date.slice(5, 7)) - 1) / 3) + 1}`;
 
 /** Picks `want` items spread evenly through an already date-sorted list. */
-function spread<T>(items: T[], want: number): T[] {
+export function spread<T>(items: T[], want: number): T[] {
   if (want >= items.length) return items;
   return Array.from({ length: want }, (_, i) => items[Math.floor(((i + 0.5) * items.length) / want)]);
 }
