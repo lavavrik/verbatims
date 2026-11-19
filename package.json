@@ -18,7 +18,8 @@
     "build": "tsx --env-file-if-exists=.env src/cli/build.ts",
     "label": "node --env-file-if-exists=.env node_modules/vite/bin/vite.js --config labeller/vite.config.ts",
     "typecheck": "tsc -p .",
-    "relang": "tsx --env-file-if-exists=.env src/cli/relang.ts"
+    "relang": "tsx --env-file-if-exists=.env src/cli/relang.ts",
+    "eval:split": "tsx --env-file-if-exists=.env src/cli/eval-split.ts"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
