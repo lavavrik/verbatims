@@ -38,7 +38,19 @@ export function buildSummary({ data: d, split, splitHash, results, judgeChecks, 
   const answerRuns = picked.filter((r) => r.result.kind === 'answer') as { file: string; result: ResultFile<AnswerOutput> }[];
   const labelled = Object.keys(d.labels).sort();
   const ownerAvg = labelled.reduce((a, id) => a + d.labels[id].topics.length, 0) / labelled.length;
-  const rep1 = (r: ResultFile<ClassifyOutput>) => new Map(r.outputs.filter((o) => o.rep === 1).map((o) => [o.id, sorted(o.topics)]));
+  // Failed calls have no topics and are left out, so they can never look like an exact match.
+  const rep1 = (r: ResultFile<ClassifyOutput>) => new Map(r.outputs.filter((o) => o.rep === 1 && o.topics).map((o) => [o.id, sorted(o.topics)]));
+  const exactOnTest = (a: Map<string, string[]>, b: Map<string, string[]>) => {
+    let better = 0, worse = 0;
+    for (const id of split.sampled.test) {
+      if (!a.has(id) || !b.has(id) || !d.labels[id]) continue;
+      const gold = sorted(d.labels[id].topics);
+      const okA = sameSet(a.get(id)!, gold), okB = sameSet(b.get(id)!, gold);
+      if (!okA && okB) better++;
+      if (okA && !okB) worse++;
+    }
+    return { better, worse };
+  };
   const stableIds = (r: ResultFile<ClassifyOutput>) => new Set(labelled.filter((id) => {
     const sets = r.outputs.filter((o) => o.id === id && o.topics).map((o) => sorted(o.topics));
     return sets.length >= 2 && sets.every((s) => sameSet(s, sets[0]));
@@ -65,18 +77,19 @@ export function buildSummary({ data: d, split, splitHash, results, judgeChecks, 
   const paired = models.flatMap((model) => {
     const ps = promptsOf(model);
     return ps.flatMap((from, i) => ps.slice(i + 1).map((to) => {
-      const a = rep1(run(model, from)!), b = rep1(run(model, to)!);
-      let better = 0, worse = 0;
-      for (const id of split.sampled.test) {
-        const gold = sorted(d.labels[id]?.topics);
-        if (!a.has(id) || !b.has(id) || !d.labels[id]) continue;
-        const okA = sameSet(a.get(id)!, gold), okB = sameSet(b.get(id)!, gold);
-        if (!okA && okB) better++;
-        if (okA && !okB) worse++;
-      }
+      const { better, worse } = exactOnTest(rep1(run(model, from)!), rep1(run(model, to)!));
       return { model, from, to, subset: 'test' as const, better, worse, signTestP: signTestP(better, worse) };
     }));
   });
+
+  // Each pair of models at the highest prompt version both have, review by review on test.
+  const pairedModels: { prompt: string; a: string; b: string; betterInB: number; worseInB: number; signTestP: number }[] = [];
+  for (let i = 0; i < models.length; i++) for (let j = i + 1; j < models.length; j++) {
+    const prompt = promptsOf(models[i]).filter((p) => promptsOf(models[j]).includes(p)).at(-1);
+    if (!prompt) continue;
+    const { better, worse } = exactOnTest(rep1(run(models[i], prompt)!), rep1(run(models[j], prompt)!));
+    pairedModels.push({ prompt, a: models[i], b: models[j], betterInB: better, worseInB: worse, signTestP: signTestP(better, worse) });
+  }
 
   const stabilityPairs: [{ model: string; prompt: string }, { model: string; prompt: string }][] = [];
   for (const model of models) {
@@ -95,12 +108,19 @@ export function buildSummary({ data: d, split, splitHash, results, judgeChecks, 
 
   const answers = answerRuns.map(({ file, result: r }) => {
     const m = answerMetrics(r.outputs, r.judge?.verdicts ?? [], d, judgeChecks);
+    // Q2 asks for evidence from the planted month: count distinct valid cited reviews per answer, and those dated elsewhere.
+    let cited = 0, offMonthCited = 0;
+    for (const o of r.outputs.filter((x) => x.questionId === 'Q2' && x.answer)) {
+      const ids = new Set(o.answer!.claims.flatMap((c) => c.reviewIds).filter((id) => d.byId.has(id)));
+      cited += ids.size;
+      offMonthCited += [...ids].filter((id) => !d.byId.get(id)!.date.startsWith(d.redate.targetMonth)).length;
+    }
     return {
       file, model: r.model, costUsd: r.usage.estCostUsd, judgeCostUsd: r.judge?.estCostUsd ?? 0,
       q1Correct: kn(m.Q1.q1Correct),
       unsupportedClaims: { Q1: kn(m.Q1.unsupportedClaims), Q2: kn(m.Q2.unsupportedClaims), Q3: kn(m.Q3.unsupportedClaims) },
       invalidCitations: m.Q1.invalidCitations + m.Q2.invalidCitations + m.Q3.invalidCitations,
-      q2: { meanRecall: m.Q2.q2?.meanRecall ?? null, meanPrecision: m.Q2.q2?.meanPrecision ?? null, offMonthRelevant: m.Q2.q2?.offMonthRelevant ?? 0 },
+      q2: { meanRecall: m.Q2.q2?.meanRecall ?? null, meanPrecision: m.Q2.q2?.meanPrecision ?? null, offMonthRelevant: m.Q2.q2?.offMonthRelevant ?? 0, cited, offMonthCited },
     };
   });
   const agreement = answerMetrics([], [], d, judgeChecks).judgeAgreement;
@@ -114,7 +134,7 @@ export function buildSummary({ data: d, split, splitHash, results, judgeChecks, 
       split: { dev: split.sampled.dev.length, test: split.sampled.test.length, added: split.added.length },
       plantedTrend: { month: d.redate.targetMonth, category: 'cleanliness', reviews: d.redate.groundTruth.length },
     },
-    classify, paired, pairedStability, answers,
+    classify, paired, pairedModels, pairedStability, answers,
     judgeAgreement: { onSupported: kn(agreement.onSupported), onUnsupported: kn(agreement.onUnsupported) },
     totalCostUsd: results.reduce((a, { result }) => a + result.usage.estCostUsd + (result.judge?.estCostUsd ?? 0), 0),
   };

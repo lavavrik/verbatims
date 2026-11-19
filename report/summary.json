@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T20:40:46.549Z",
+  "generatedAt": "2026-11-19T20:53:27.483Z",
   "datasetHash": "7df9bd6b92eb7298f897cf9caf06805d2ef984390c78465b12310ad919c30e87",
   "splitHash": "8c4c7e4c2ec32c18",
   "dataset": {
@@ -417,6 +417,16 @@
       "signTestP": 0.015625
     }
   ],
+  "pairedModels": [
+    {
+      "prompt": "v3",
+      "a": "claude-haiku-5-5",
+      "b": "claude-sonnet-5-5",
+      "betterInB": 5,
+      "worseInB": 3,
+      "signTestP": 0.7265625
+    }
+  ],
   "pairedStability": [
     {
       "a": {
@@ -512,7 +522,9 @@
       "q2": {
         "meanRecall": 0.888888888888889,
         "meanPrecision": 0.7875,
-        "offMonthRelevant": 0
+        "offMonthRelevant": 0,
+        "cited": 51,
+        "offMonthCited": 1
       }
     },
     {
@@ -542,7 +554,9 @@
       "q2": {
         "meanRecall": 0.8444444444444444,
         "meanPrecision": 0.679337231968811,
-        "offMonthRelevant": 0
+        "offMonthRelevant": 0,
+        "cited": 56,
+        "offMonthCited": 4
       }
     }
   ],

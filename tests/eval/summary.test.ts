@@ -79,3 +79,28 @@ test('the summary contains no review text and no labels', () => {
   expect(s).not.toMatch(/Review \d+ text/);
   expect(s).not.toMatch(/"r0\d{3}"/);
 });
+
+test('Q2 counts cited reviews from outside the planted month', () => {
+  const a = answer('claude-haiku-5-5');
+  // fixture planted month is 2024-06; r0006 is dated 2024-06-10, r0007 2024-07-10
+  a.outputs = [{ questionId: 'Q2', rep: 1, answer: { answer: 'a', claims: [{ text: 'c', reviewIds: ['r0006', 'r0007', 'r0007'] }] }, usage: u }];
+  const s = build([{ file: 'ans.json', result: a }]);
+  expect(s.answers[0].q2.offMonthCited).toBe(1);
+  expect(s.answers[0].q2.cited).toBe(2);
+});
+
+test('models are compared with each other on test, at the highest prompt both have', () => {
+  const h = classify('claude-haiku-5-5', 'v3', (id) => (id === 'r0001' ? ['noise'] : ['location']));
+  const so = classify('claude-sonnet-5-5', 'v3', ok);
+  const pm = build([{ file: 'a', result: h }, { file: 'b', result: so }]).pairedModels;
+  expect(pm).toEqual([{ prompt: 'v3', a: 'claude-haiku-5-5', b: 'claude-sonnet-5-5', betterInB: 1, worseInB: 0, signTestP: 1 }]);
+});
+
+test('a failed rep-1 call never counts as an exact match, even for a review labelled with no topics', () => {
+  const data = { ...d, labels: { ...d.labels, r0001: { topics: [], viaTranslation: false } } };
+  const v1 = classify('claude-haiku-5-5', 'v1', (id) => (id === 'r0001' ? ['noise'] : ['location']));
+  const v3 = classify('claude-haiku-5-5', 'v3', ok);
+  v3.outputs = v3.outputs.map((o) => (o.id === 'r0001' && o.rep === 1 ? { ...o, topics: undefined, error: 'boom' } : o));
+  const s = buildSummary({ data, split, splitHash: 'S', results: [{ file: 'a', result: v1 }, { file: 'b', result: v3 }], judgeChecks: [], generatedAt: '' });
+  expect(s.paired[0]).toMatchObject({ better: 0, worse: 0 });
+});
