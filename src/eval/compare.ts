@@ -10,6 +10,7 @@ const sameSet = (a: string[], b: string[]) => a.length === b.length && a.every((
 export function compareRuns(a: ResultFile<ClassifyOutput>, b: ResultFile<ClassifyOutput>, d: EvalData) {
   if (a.kind !== 'classify' || b.kind !== 'classify') throw new Error(`Only classification runs can be compared (got kind ${a.kind} and ${b.kind})`);
   if (a.datasetHash !== b.datasetHash) throw new Error('The runs used different datasets; their numbers are not comparable');
+  if (a.splitHash !== b.splitHash) throw new Error('The runs used different dev/test splits; their numbers are not comparable');
 
   const metricDeltas: Delta[] = [];
   for (const subset of ['test', 'dev', 'sampled', 'added', 'all'] as const) {

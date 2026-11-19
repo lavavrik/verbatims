@@ -2,13 +2,16 @@ import type { AnswerOutput, Verdict } from './answer';
 import type { EvalData } from './data';
 import { wilson, type Rate } from './stats';
 
+const meanOf = (xs: (number | null)[]) => { const v = xs.filter((x): x is number => x !== null); return v.length ? v.reduce((a, b) => a + b, 0) / v.length : null; };
+
 export type JudgeCheck = { resultFile: string; outputIndex: number; claimIndex: number; reviewId: string; judge: boolean; owner: boolean };
 
 export type QuestionMetrics = {
   n: number; errors: number; citations: number; invalidCitations: number; claims: number;
   unsupportedClaims: Rate | null; unjudgedClaims: number;
   q1Correct?: Rate | null;
-  q2?: { recall: Rate | null; precision: Rate | null; offMonthRelevant: number };
+  /** recall/precision pool all reps (labelled "pooled" in reports); perRep and the means treat each rep as one result. */
+  q2?: { recall: Rate | null; precision: Rate | null; offMonthRelevant: number; perRep: { rep: number; recall: number | null; precision: number | null }[]; meanRecall: number | null; meanPrecision: number | null };
 };
 
 /**
@@ -24,6 +27,7 @@ export function answerMetrics(outputs: AnswerOutput[], verdicts: (Verdict & { er
     const good = mine.filter(({ o }) => o.answer);
     let citations = 0, invalid = 0, claims = 0, unsupported = 0, unjudged = 0;
     let q2Hits = 0, q2Truth = 0, q2Cited = 0, q2InTruth = 0, offMonth = 0, q1 = 0;
+    const perRep: { rep: number; recall: number | null; precision: number | null }[] = [];
     for (const { o, i } of good) {
       const a = o.answer!;
       a.claims.forEach((c, ci) => {
@@ -37,19 +41,22 @@ export function answerMetrics(outputs: AnswerOutput[], verdicts: (Verdict & { er
       });
       if (q === 'Q1' && a.category === 'cleanliness' && a.month === d.redate.targetMonth) q1++;
       if (q === 'Q2') {
-        const cited = new Set(a.claims.flatMap((c) => c.reviewIds).filter((id) => d.byId.has(id)));
-        q2Hits += [...truth].filter((id) => cited.has(id)).length;
-        q2Truth += truth.size;
-        q2Cited += cited.size;
-        q2InTruth += [...cited].filter((id) => truth.has(id)).length;
-        offMonth += [...cited].filter((id) => !truth.has(id) && complaints.has(id)).length;
+        // Every distinct cited id counts in the precision denominator, invented ones included.
+        const cited = new Set(a.claims.flatMap((c) => c.reviewIds));
+        const hits = [...truth].filter((id) => cited.has(id)).length, inTruth = [...cited].filter((id) => truth.has(id)).length;
+        q2Hits += hits; q2Truth += truth.size; q2Cited += cited.size; q2InTruth += inTruth;
+        offMonth += [...cited].filter((id) => d.byId.has(id) && !truth.has(id) && complaints.has(id)).length;
+        perRep.push({ rep: o.rep, recall: truth.size ? hits / truth.size : null, precision: cited.size ? inTruth / cited.size : null });
       }
     }
     result[q] = {
       n: good.length, errors: mine.length - good.length, citations, invalidCitations: invalid, claims,
       unsupportedClaims: wilson(unsupported, claims - unjudged), unjudgedClaims: unjudged,
       ...(q === 'Q1' ? { q1Correct: wilson(q1, good.length) } : {}),
-      ...(q === 'Q2' ? { q2: { recall: wilson(q2Hits, q2Truth), precision: wilson(q2InTruth, q2Cited), offMonthRelevant: offMonth } } : {}),
+      ...(q === 'Q2' ? { q2: {
+        recall: wilson(q2Hits, q2Truth), precision: wilson(q2InTruth, q2Cited), offMonthRelevant: offMonth, perRep,
+        meanRecall: meanOf(perRep.map((r) => r.recall)), meanPrecision: meanOf(perRep.map((r) => r.precision)),
+      } } : {}),
     };
   }
   const onS = checks.filter((c) => c.judge), onU = checks.filter((c) => !c.judge);

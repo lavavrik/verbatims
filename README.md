@@ -77,7 +77,7 @@ To make the decisions from scratch (needs an Anthropic API key in `.env`):
 [`docs/superpowers/specs/2026-11-19-eval-runner-design.md`](docs/superpowers/specs/2026-11-19-eval-runner-design.md).
 
 - **Topic classification:** prompt v1 (topic names) vs v2 (names + descriptions), scored
-  against the hand labels. Headline numbers use the test half of the 75 randomly sampled
+  against the hand labels. Headline numbers use the test half of the 75 language-stratified sampled
   labelled reviews (`eval/split.json`), with n and 95% intervals.
 - **Consistency:** the labelled reviews classified 5 times. How often does the answer change?
 - **Grounded answers:** questions about the planted cleanliness drop, answered with

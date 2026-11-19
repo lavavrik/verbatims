@@ -14,7 +14,7 @@ test('invalid or malformed ids count as invalid and are never judged', async () 
   const outputs = [ans('Q3', [claim('x', ['r0001', 'r12', '12', 'r9999'])])];
   const judged: string[] = [];
   const judge = makeJudge((async (_o: unknown, _s: unknown, _sys: string, user: string) => { judged.push(user); return { value: { supported: true, reason: '' }, usage: u }; }) as never);
-  const verdicts = await judge(outputs, d);
+  const verdicts = await judge.run(judge.jobs(outputs, d), d);
   expect(verdicts.map((x) => x.reviewId)).toEqual(['r0001']);
   const m = answerMetrics(outputs, verdicts, d).Q3;
   expect(m).toMatchObject({ citations: 4, invalidCitations: 3, claims: 1 });

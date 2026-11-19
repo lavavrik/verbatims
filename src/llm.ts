@@ -7,6 +7,11 @@ export const EFFORT = 'low' as const;
 
 let client: Anthropic | undefined;
 
+/** A failed call that still used (and billed) tokens. */
+export class LlmError extends Error {
+  constructor(message: string, readonly usage: { input: number; output: number }) { super(message); }
+}
+
 export type CallOptions = { model: string; effort: 'low' | 'medium' | 'high'; maxTokens?: number; cacheSystem?: boolean };
 
 /**
@@ -22,13 +27,11 @@ export async function callStructuredWith<T>(opts: CallOptions, schema: z.ZodType
     system: opts.cacheSystem ? [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }] : system,
     messages: [{ role: 'user', content: user }],
   });
-  if (res.stop_reason === 'refusal') throw new Error(`Model refused: ${res.stop_details?.category ?? 'unknown'}`);
-  if (res.parsed_output == null) throw new Error(`No parsed output (stop_reason: ${res.stop_reason})`);
   const u = res.usage;
-  return {
-    value: res.parsed_output as T,
-    usage: { input: u.input_tokens + (u.cache_read_input_tokens ?? 0) + (u.cache_creation_input_tokens ?? 0), output: u.output_tokens },
-  };
+  const usage = { input: u.input_tokens + (u.cache_read_input_tokens ?? 0) + (u.cache_creation_input_tokens ?? 0), output: u.output_tokens };
+  if (res.stop_reason === 'refusal') throw new LlmError(`Model refused: ${res.stop_details?.category ?? 'unknown'}`, usage);
+  if (res.parsed_output == null) throw new LlmError(`No parsed output (stop_reason: ${res.stop_reason})`, usage);
+  return { value: res.parsed_output as T, usage };
 }
 
 /** Step-1 helper: the default model and effort, value only. */

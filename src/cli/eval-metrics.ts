@@ -1,4 +1,5 @@
 // npm run eval:metrics -- results/<file>.json : recompute metrics from stored outputs (no API calls).
+import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { loadJudgeChecks, type AnswerOutput } from '../eval/answer';
 import { answerMetrics } from '../eval/answerMetrics';
@@ -13,7 +14,9 @@ const file = await readResult(path);
 const d = await loadEvalData();
 if (file.datasetHash !== d.datasetHash) throw new Error(`${path} was run on a different dataset; its metrics can't be recomputed against this one.`);
 if (file.kind === 'classify') {
-  const split: SplitFile = JSON.parse(await readFile('eval/split.json', 'utf8'));
+  const splitText = await readFile('eval/split.json', 'utf8');
+  if (createHash('sha256').update(splitText).digest('hex').slice(0, 16) !== file.splitHash) throw new Error(`${path} was scored on a different dev/test split than eval/split.json; recomputing would change what its numbers mean.`);
+  const split: SplitFile = JSON.parse(splitText);
   file.metrics = computeClassifyMetrics(file.outputs as ClassifyOutput[], d, split);
 } else {
   // Never re-calls the judge: uses the verdicts stored in the file.
