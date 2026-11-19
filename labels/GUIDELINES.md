@@ -23,3 +23,9 @@ Rule of thumb: **would better cleaning or upkeep of the place itself have fixed 
 
 A **cleanliness complaint** (`decisions/complaints.json`) is a review that says the place
 was not clean enough by this rule. Praise ("very clean") is not a complaint.
+
+**Severity: any negative mention counts, however mild.** If the guest raises it as a
+downside ("a slight smell from the bathroom", "the only negative was…", "towels didn't
+smell nice"), it is a complaint, even when they add "nothing major" or praise the rest.
+A review that says a problem was *absent* ("we didn't notice the damp smell others
+mentioned") is not a complaint.
