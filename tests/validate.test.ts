@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 import { buildDataset } from '../src/pipeline/build';
-import { forbiddenNameTokens, validate } from '../src/validate';
+import { allowEntry, forbiddenNameTokens, validate } from '../src/validate';
 import { decisionsFixture, rawFixture } from './helpers';
 
 const built = () => buildDataset(rawFixture(), decisionsFixture());
@@ -21,7 +21,7 @@ test('validate flags a leftover reviewer name even in Cyrillic, without printing
 test('an allowed mention (owner confirmed it is not a name) is skipped', () => {
   const { reviews, manifest } = built();
   reviews[1].text = 'We will come back. Will recommend!';
-  const problems = validate(reviews, manifest, ['Will'], [{ id: reviews[1].id, start: 3 }, { id: reviews[1].id, start: 19 }]);
+  const problems = validate(reviews, manifest, ['Will'], [allowEntry(reviews[1].id, 'will')]);
   expect(problems).toEqual([]);
 });
 

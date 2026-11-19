@@ -1,7 +1,11 @@
+import { existsSync } from 'node:fs';
 import { readJson, writeJson } from '../decisions';
 import { selectSample, toSampleDecision } from '../pipeline/sample';
 import { loadReviews } from '../raw';
 
+if (existsSync('decisions/sample.json') && !process.argv.includes('--force')) {
+  throw new Error('decisions/sample.json exists. Re-sampling reassigns every id and invalidates all later decisions; pass --force only if you mean that.');
+}
 const { listingId } = await readJson<{ listingId: string }>('decisions/listing.json');
 const reviews = (await loadReviews('raw/reviews.csv.gz')).filter((r) => r.listingId === listingId);
 const decision = toSampleDecision(listingId, selectSample(reviews));

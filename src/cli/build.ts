@@ -1,15 +1,19 @@
 // Replays raw/ + decisions/ into data/ with no API calls, then validates. Exits 1 on any problem.
 import { copyFile, mkdir, writeFile } from 'node:fs/promises';
 import { readJson, readJsonOr, writeJson } from '../decisions';
-import { buildDataset, type AllowedMention, type RedateDecision } from '../pipeline/build';
+import { buildDataset, type RedateDecision } from '../pipeline/build';
+import { checkRawHashes, sha256File } from '../pipeline/download';
 import type { RatingCheck, RatingsDecision } from '../pipeline/rate';
 import type { Redaction } from '../pipeline/redact';
 import type { SampleDecision } from '../pipeline/sample';
 import { loadListings, loadReviews } from '../raw';
 import type { SourceInfo } from '../types';
-import { forbiddenNameTokens, validate } from '../validate';
+import { forbiddenNameTokens, validate, type AllowedMention } from '../validate';
 
-const raw = { reviews: await loadReviews('raw/reviews.csv.gz'), listings: await loadListings('raw/listings.csv.gz'), source: await readJson<SourceInfo>('raw/source.json') };
+const source = await readJson<SourceInfo>('decisions/source.json');
+const rawProblems = checkRawHashes(source, { reviewsSha256: await sha256File('raw/reviews.csv.gz'), listingsSha256: await sha256File('raw/listings.csv.gz') });
+if (rawProblems.length) { console.error(rawProblems.join('\n')); process.exit(1); }
+const raw = { reviews: await loadReviews('raw/reviews.csv.gz'), listings: await loadListings('raw/listings.csv.gz'), source };
 const decisions = {
   sample: await readJson<SampleDecision>('decisions/sample.json'),
   redactions: await readJsonOr<Redaction[]>('decisions/redactions.json', []),

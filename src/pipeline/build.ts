@@ -1,14 +1,14 @@
 import { RATING_KEYS, type Listing, type RatingKey, type Ratings, type SourceInfo, type SourceReview } from '../types';
 import { mergeRatings, type RatingCheck, type RatingSource, type RatingsDecision } from './rate';
-import { applyRedactions, type Redaction } from './redact';
+import type { AllowedMention } from '../validate';
+import { applyRedactions, UNSPACED, type Redaction } from './redact';
 import type { RedatePlan } from './redate';
-import type { SampleDecision } from './sample';
+import { textHash, type SampleDecision } from './sample';
 
 export const PIPELINE_VERSION = '1';
 
 export type RedateDecision = RedatePlan & { rules: { want: number; minRatio: number; maxMonthFactor: number } };
-/** Positions the owner confirmed are not names (e.g. "will"), so the validator skips them. */
-export type AllowedMention = { id: string; start: number };
+export type { AllowedMention } from '../validate';
 
 export type Decisions = {
   sample: SampleDecision;
@@ -47,13 +47,21 @@ export function buildDataset(raw: Raw, d: Decisions): { reviews: PublishedReview
   const reviews: PublishedReview[] = d.sample.items.map((it) => {
     const source = rawById.get(it.sourceId);
     if (!source) throw new Error(`Review ${it.sourceId} (${it.id}) missing from raw reviews`);
+    if (textHash(source.text) !== it.textHash) throw new Error(`${it.id}: review text changed since sampling; committed offsets no longer apply`);
+    const spans = d.redactions.filter((x) => x.id === it.id);
+    for (const s of spans) {
+      const piece = source.text.slice(s.start, s.start + s.length);
+      const before = source.text.slice(0, s.start), after = source.text.slice(s.start + s.length);
+      const cuts = !UNSPACED.test(piece) && (/[\p{L}\p{M}\p{N}]$/u.test(before) || /^[\p{L}\p{M}\p{N}]/u.test(after) || !/^\p{L}/u.test(piece));
+      if (cuts) throw new Error(`${it.id}: redaction at ${s.start} cuts through a word; offsets don't match the text`);
+    }
     const r = merged[it.id];
     if (!r) throw new Error(`No ratings for ${it.id}; run npm run rate`);
     return {
       id: it.id,
       date: moved.get(it.id) ?? source.date,
       language: it.language,
-      text: applyRedactions(source.text, d.redactions.filter((x) => x.id === it.id)),
+      text: applyRedactions(source.text, spans),
       ratings: r.ratings,
       ratings_source: r.source,
     };

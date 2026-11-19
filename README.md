@@ -42,7 +42,9 @@ data/labels/rating-checks.json
 ## Rebuild it
 
 The build replays committed decisions (`decisions/`, `labels/`); it makes no API calls
-and gives the same files every time.
+and gives the same files every time. `decisions/source.json` records the source URLs,
+download date and file hashes; the build refuses raw files that don't match, and every
+review's text hash is checked before its saved redaction offsets are applied.
 
 ```sh
 npm install

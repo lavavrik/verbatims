@@ -20,4 +20,4 @@ export type Listing = {
   avgScores: Record<RatingKey, number | null>;
 };
 
-export type SourceInfo = { reviewsUrl: string; listingsUrl: string; scrapeDate: string; downloadedAt: string };
+export type SourceInfo = { reviewsUrl: string; listingsUrl: string; scrapeDate: string; downloadedAt: string; reviewsSha256: string; listingsSha256: string };

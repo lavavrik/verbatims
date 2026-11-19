@@ -1,5 +1,5 @@
 import { readJson } from './decisions';
-import type { SampleDecision } from './pipeline/sample';
+import { textHash, type SampleDecision } from './pipeline/sample';
 import { loadListings, loadReviews } from './raw';
 import type { Listing, SourceReview } from './types';
 
@@ -14,6 +14,7 @@ export async function loadSampled(): Promise<{ listing: Listing; items: SampledI
   const items = sample.items.map((it) => {
     const source = raw.get(it.sourceId);
     if (!source) throw new Error(`Review ${it.sourceId} (${it.id}) not in raw/reviews.csv.gz`);
+    if (textHash(source.text) !== it.textHash) throw new Error(`${it.id}: review text changed since sampling (normalisation or raw file differs)`);
     return { id: it.id, language: it.language, source };
   });
   return { listing, items };

@@ -3,7 +3,7 @@
 import { z } from 'zod';
 import { readJsonOr, writeJson } from '../decisions';
 import { callStructured, pool } from '../llm';
-import { findOccurrences, mergeRedactions, type Redaction, type Span } from '../pipeline/redact';
+import { combineRedactions, findOccurrences, type Redaction, type Span } from '../pipeline/redact';
 import { loadSampled } from '../workspace';
 
 const SYSTEM = `You find people's names in guest reviews of an Airbnb listing.
@@ -29,6 +29,12 @@ await pool(todo, 4, async (it) => {
 });
 await writeJson(PROGRESS, done);
 
-const redactions: Redaction[] = mergeRedactions(items.flatMap((it) => (done[it.id] ?? []).map((s) => ({ id: it.id, ...s }))));
+const auto: Redaction[] = items.flatMap((it) => (done[it.id] ?? []).map((s) => ({ id: it.id, ...s })));
+// Keep manual additions already in redactions.json, and keep removed spans removed.
+const redactions = combineRedactions(
+  auto,
+  await readJsonOr<Redaction[]>('decisions/redactions.json', []),
+  await readJsonOr<{ id: string; start: number }[]>('decisions/redactions-removed.json', []),
+);
 await writeJson('decisions/redactions.json', redactions);
 console.log(`Wrote ${redactions.length} redactions across ${new Set(redactions.map((r) => r.id)).size} reviews. Fix misses with: npm run redact -- add <id> "<name>"`);

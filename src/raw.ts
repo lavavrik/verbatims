@@ -1,18 +1,19 @@
 import { readFile } from 'node:fs/promises';
 import { gunzipSync } from 'node:zlib';
 import { parse } from 'csv-parse/sync';
+import { decodeHTML } from 'entities';
 import type { Listing, RatingKey, SourceReview } from './types';
 
-const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
-
-/** Inside Airbnb comments are HTML-ish: turn <br> into newlines and decode entities. */
+/**
+ * Inside Airbnb comments are HTML-ish: <br> becomes a newline, every HTML entity is decoded
+ * (invalid code points become U+FFFD instead of crashing), and the result is NFC so that
+ * names and redaction offsets compare reliably. Changing this function shifts committed
+ * offsets; the per-review text hash in decisions/sample.json catches that.
+ */
 export function normaliseText(raw: string): string {
-  return raw
-    .replace(/<br\s*\/?>/gi, '\n')
-    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
-    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
-    .replace(/&([a-z]+);/gi, (m, name) => ENTITIES[name.toLowerCase()] ?? m)
+  return decodeHTML(raw.replace(/<br\s*\/?>/gi, '\n'))
     .replace(/\r\n?/g, '\n')
+    .normalize('NFC')
     .trim();
 }
 

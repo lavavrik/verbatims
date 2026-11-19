@@ -1,8 +1,12 @@
+import { createHash } from 'node:crypto';
 import { detectLanguage } from '../lang';
 import type { SourceReview } from '../types';
 
 export type SampledReview = SourceReview & { language: string };
-export type SampleDecision = { listingId: string; items: { id: string; sourceId: string; language: string }[] };
+export type SampleDecision = { listingId: string; items: { id: string; sourceId: string; language: string; textHash: string }[] };
+
+/** Short sha256 of a review's normalised text; binds every decision to the exact text it was made on. */
+export const textHash = (text: string) => createHash('sha256').update(text).digest('hex').slice(0, 16);
 
 export const SAMPLE_RANGE = { min: 300, max: 500 };
 
@@ -56,6 +60,6 @@ export function selectSample(reviews: SourceReview[], detectLang: (t: string) =>
 export function toSampleDecision(listingId: string, sample: SampledReview[]): SampleDecision {
   return {
     listingId,
-    items: [...sample].sort(byDate).map((r, i) => ({ id: `r${String(i + 1).padStart(4, '0')}`, sourceId: r.sourceId, language: r.language })),
+    items: [...sample].sort(byDate).map((r, i) => ({ id: `r${String(i + 1).padStart(4, '0')}`, sourceId: r.sourceId, language: r.language, textHash: textHash(r.text) })),
   };
 }

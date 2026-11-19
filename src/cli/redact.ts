@@ -1,7 +1,8 @@
-// Manual fixes: npm run redact -- add r0042 "Pavel"  |  remove r0042 17  |  allow r0042 31
-// "allow" marks a position the build flagged that is not a name (e.g. the word "will"); positions are in the published text.
+// Manual fixes: npm run redact -- add r0042 "Pavel"  |  remove r0042 17  |  allow r0042 will
+// "remove" is remembered in decisions/redactions-removed.json so a detect-names rerun won't bring the span back.
+// "allow" marks a word the build flagged that is not a name in that review (stored as a hash).
 import { readJsonOr, writeJson } from '../decisions';
-import type { AllowedMention } from '../pipeline/build';
+import { allowEntry, type AllowedMention } from '../validate';
 import { findOccurrences, mergeRedactions, type Redaction } from '../pipeline/redact';
 import { loadSampled } from '../workspace';
 
@@ -20,13 +21,16 @@ if (cmd === 'add') {
   const kept = redactions.filter((r) => !(r.id === id && r.start === Number(arg)));
   if (kept.length === redactions.length) throw new Error(`No redaction in ${id} starting at ${arg}.`);
   await writeJson(FILE, kept);
+  const REMOVED = 'decisions/redactions-removed.json';
+  await writeJson(REMOVED, [...(await readJsonOr<{ id: string; start: number }[]>(REMOVED, [])), { id, start: Number(arg) }]);
   console.log(`Removed redaction at ${arg} from ${id}.`);
 } else if (cmd === 'allow') {
   const ALLOW = 'decisions/allowed-mentions.json';
   const allowed = await readJsonOr<AllowedMention[]>(ALLOW, []);
-  if (!id || Number.isNaN(Number(arg))) throw new Error('Usage: allow <id> <start>');
-  await writeJson(ALLOW, [...allowed.filter((a) => !(a.id === id && a.start === Number(arg))), { id, start: Number(arg) }]);
-  console.log(`Allowed the mention at ${arg} in ${id}.`);
+  if (!id || !arg) throw new Error('Usage: allow <id> <word>');
+  const entry = allowEntry(id, arg);
+  await writeJson(ALLOW, [...allowed.filter((a) => !(a.id === id && a.tokenHash === entry.tokenHash)), entry]);
+  console.log(`Allowed "${arg}" in ${id}.`);
 } else {
-  console.log('Usage: npm run redact -- add <id> "<name>" | remove <id> <start> | allow <id> <start>');
+  console.log('Usage: npm run redact -- add <id> "<name>" | remove <id> <start> | allow <id> <word>');
 }
