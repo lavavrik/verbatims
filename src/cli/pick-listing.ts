@@ -4,6 +4,7 @@ import { rankCandidates } from '../pipeline/pickListing';
 import { loadListings, loadReviews } from '../raw';
 
 const chooseIdx = process.argv.indexOf('--choose');
+console.log('Loading reviews (about 5 seconds)…');
 const reviews = await loadReviews('raw/reviews.csv.gz');
 const listings = await loadListings('raw/listings.csv.gz');
 
@@ -14,6 +15,7 @@ if (chooseIdx > -1) {
   await writeFile('decisions/listing.json', JSON.stringify({ listingId, chosenAt: new Date().toISOString().slice(0, 10) }, null, 2) + '\n');
   console.log(`Chose listing ${listingId} (${listings.get(listingId)?.name ?? 'unknown name'}). Next: npm run sample`);
 } else {
+  console.log(`Ranking ${reviews.length} reviews…`);
   const ranked = rankCandidates(reviews, detectLanguage).slice(0, 10);
   if (ranked.length === 0) console.log('No listing meets every rule. Loosen PICK_RULES in src/pipeline/pickListing.ts.');
   console.table(ranked.map((c) => ({

@@ -13,19 +13,26 @@ export const PICK_RULES = { minReviews: 300, minSpanYears: 3, minNonEnglishShare
 
 const YEAR_MS = 365.25 * 86400000;
 
-export function summarise(listingId: string, reviews: SourceReview[], detectLang: (t: string) => string): ListingCandidate {
+const spanYears = (reviews: SourceReview[]) => {
   const times = reviews.map((r) => Date.parse(r.date));
-  const nonEnglish = reviews.filter((r) => detectLang(r.text) !== 'eng').length;
+  return (Math.max(...times) - Math.min(...times)) / YEAR_MS;
+};
+const complaintHits = (reviews: SourceReview[]) => reviews.filter((r) => looksLikeCleanlinessComplaint(r.text)).length;
+
+export function summarise(listingId: string, reviews: SourceReview[], detectLang: (t: string) => string): ListingCandidate {
   return {
     listingId,
     reviews: reviews.length,
-    spanYears: (Math.max(...times) - Math.min(...times)) / YEAR_MS,
-    nonEnglishShare: nonEnglish / reviews.length,
-    complaintHits: reviews.filter((r) => looksLikeCleanlinessComplaint(r.text)).length,
+    spanYears: spanYears(reviews),
+    nonEnglishShare: reviews.filter((r) => detectLang(r.text) !== 'eng').length / reviews.length,
+    complaintHits: complaintHits(reviews),
   };
 }
 
-/** Listings that meet every rule from the design, most reviews first. */
+/**
+ * Listings that meet every rule from the design, most reviews first. Cheap rules run first:
+ * language detection (~0.6 ms per review) only runs on listings that pass the others.
+ */
 export function rankCandidates(reviews: SourceReview[], detectLang: (t: string) => string): ListingCandidate[] {
   const byListing = new Map<string, SourceReview[]>();
   for (const r of reviews) {
@@ -35,9 +42,11 @@ export function rankCandidates(reviews: SourceReview[], detectLang: (t: string) 
   }
   const out: ListingCandidate[] = [];
   for (const [id, rs] of byListing) {
-    if (rs.length < PICK_RULES.minReviews) continue; // cheap check before language detection
+    if (rs.length < PICK_RULES.minReviews) continue;
+    if (spanYears(rs) < PICK_RULES.minSpanYears) continue;
+    if (complaintHits(rs) < PICK_RULES.minComplaintHits) continue;
     const c = summarise(id, rs, detectLang);
-    if (c.spanYears >= PICK_RULES.minSpanYears && c.nonEnglishShare >= PICK_RULES.minNonEnglishShare && c.complaintHits >= PICK_RULES.minComplaintHits) out.push(c);
+    if (c.nonEnglishShare >= PICK_RULES.minNonEnglishShare) out.push(c);
   }
   return out.sort((a, b) => b.reviews - a.reviews);
 }

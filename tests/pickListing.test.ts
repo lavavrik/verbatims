@@ -47,3 +47,11 @@ test('cleanliness pre-filter matches complaints across languages', () => {
   expect(looksLikeCleanlinessComplaint('dusty shelves')).toBe(true);
   expect(looksLikeCleanlinessComplaint('Great location')).toBe(false);
 });
+
+test('language detection only runs on listings that pass the cheap filters', () => {
+  let calls = 0;
+  const counting = (t: string) => { calls++; return stubLang(t); };
+  const ranked = rankCandidates([...listing('young', { years: 2 }), ...listing('tidy', { complaints: 20 }), ...listing('good')], counting);
+  expect(ranked.map((c) => c.listingId)).toEqual(['good']);
+  expect(calls).toBe(320); // only "good" is language-detected
+});

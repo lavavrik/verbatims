@@ -1,0 +1,8 @@
+{
+  "reviewsUrl": "https://data.insideairbnb.com/czech-republic/prague/prague/2026-09-20/data/reviews.csv.gz",
+  "listingsUrl": "https://data.insideairbnb.com/czech-republic/prague/prague/2026-09-20/data/listings.csv.gz",
+  "scrapeDate": "2026-09-20",
+  "downloadedAt": "2026-11-19",
+  "reviewsSha256": "9750b08fb320da93184f2ae511baaf92a5185c660b02421c5a98862a0c202ea9",
+  "listingsSha256": "af36fe6c57c8c6b320d62bbf3aede3140b0e3ab7eea2d04ea9769abd5712eacb"
+}
