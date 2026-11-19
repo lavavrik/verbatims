@@ -71,6 +71,30 @@ To make the decisions from scratch (needs an Anthropic API key in `.env`):
 `pick-listing` → `sample` → `detect-names` (+ `redact` fixes) → `rate` → `label`
 (complaints, rating check, topics) → `redate` → `label` (topic top-up) → `build`.
 
+## Evaluating models on it
+
+`src/eval/` measures what an LLM feature built on this data gets right. Design:
+[`docs/superpowers/specs/2026-11-19-eval-runner-design.md`](docs/superpowers/specs/2026-11-19-eval-runner-design.md).
+
+- **Topic classification:** prompt v1 (topic names) vs v2 (names + descriptions), scored
+  against the hand labels. Headline numbers use the test half of the 75 randomly sampled
+  labelled reviews (`eval/split.json`), with n and 95% intervals.
+- **Consistency:** the labelled reviews classified 5 times. How often does the answer change?
+- **Grounded answers:** questions about the planted cleanliness drop, answered with
+  review-ID citations. Each citation is checked by a judge model, which is itself spot-checked by hand.
+
+```sh
+npm run eval:split                                              # once
+npm run eval:classify -- --model claude-haiku-5-5 --prompt v2   # shows projected cost, asks first
+npm run eval:answer -- --model claude-haiku-5-5
+npm run eval:judge-check                                        # check 20 judge verdicts by hand
+npm run eval:compare -- results/<A>.json results/<B>.json
+```
+
+Every run writes `results/<date>-<kind>-<model>-<prompt>.json` with the exact prompt, model,
+settings, every output, token usage and cost; `npm run eval:metrics -- <file>` recomputes the
+numbers from those outputs without calling a model.
+
 ## How this was built
 
 Design first: the dataset's goals, anti-goals and every rule (sampling, the planted
