@@ -31,3 +31,19 @@ downside ("a slight smell from the bathroom", "the only negative was…", "towel
 smell nice"), it is a complaint, even when they add "nothing major" or praise the rest.
 A review that says a problem was *absent* ("we didn't notice the damp smell others
 mentioned") is not a complaint.
+
+## Accuracy vs listing
+
+Only when the guest explicitly compares the place with the listing, its photos or its
+description ("as described", "smaller than in the photos", "the washing machine in the
+listing was missing"). Describing the place itself ("small", "compact", "basic") is not
+this topic.
+
+## Kitchen and amenities
+
+Specific equipment the place had or lacked: kitchen items, washing machine, **towels**,
+toiletries, coffee, TV. General phrases like "has everything you need" don't count.
+
+*Added 2026-11-19 after reviewing prompt v2's disagreements (dev and added reviews only).
+Applying the towels rule changed one label: r0118 (an added review, outside the dev/test
+split) gained "kitchen and amenities" for "lacked bath towels".*

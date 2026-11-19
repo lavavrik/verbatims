@@ -5,7 +5,7 @@ import { callStructuredWith, LlmError, pool } from '../llm';
 import { classificationMetrics, consistencyMetrics, topicCounts, type ClassifyOutput, type SplitFile } from './classifyMetrics';
 import { costUsd, projectCost } from './cost';
 import { loadEvalData, type EvalData } from './data';
-import { classifyUserMessage, loadPromptTemplate, normaliseTopics, promptHash, renderClassifyPrompt, TopicsSchema, type ClassifyVersion } from './prompts';
+import { applyTopicOverrides, classifyUserMessage, loadPromptTemplate, loadTopicOverrides, normaliseTopics, promptHash, renderClassifyPrompt, TopicsSchema, type ClassifyVersion } from './prompts';
 import { cacheKey, readCache, resultPath, writeCache, writeResult, type ResultFile } from './results';
 
 export type Effort = 'low' | 'medium' | 'high';
@@ -36,7 +36,8 @@ export async function runClassify(opts: ClassifyOptions, deps: Deps): Promise<Re
   const d = opts.data ?? (await loadEvalData(dir));
   const splitText = opts.split ? JSON.stringify(opts.split) : await readFile(join(dir, 'eval/split.json'), 'utf8');
   const split: SplitFile = JSON.parse(splitText);
-  const prompt = renderClassifyPrompt(opts.version, d.topics, opts.template ?? (await loadPromptTemplate(`classify-${opts.version}`, dir)));
+  const topics = applyTopicOverrides(d.topics, await loadTopicOverrides(opts.version, dir));
+  const prompt = renderClassifyPrompt(opts.version, topics, opts.template ?? (await loadPromptTemplate(`classify-${opts.version}`, dir)));
   const hash = promptHash(prompt);
   const schema = TopicsSchema(d.topics.map((t) => t.name));
 

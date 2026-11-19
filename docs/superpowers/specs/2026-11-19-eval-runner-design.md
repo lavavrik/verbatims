@@ -225,3 +225,20 @@ owner's label.
 - Concurrency and retry settings (the SDK handles retries; keep concurrency ≤ 4).
 - Terminal output formatting of `compare` and `judge-check`.
 - Folder layout under `src/eval/`.
+
+## Round 2: prompt v3 (added 2026-11-19, owner decision)
+
+Round 1 found v2 (names + descriptions) agreed **less** with the hand labels than v1 (names
+only), on both models. The owner reviewed v2's 7 disagreements on dev and added reviews only
+(4 test reviews stayed sealed): 4 "v2 wrong", 3 "either way", none "label missed it". The cause
+was the descriptions of *accuracy vs listing* (it listed "size", so every "small flat" got
+tagged) and *kitchen and amenities* ("everything you need" counted as equipment).
+
+- **v3** = the v2 template with those two descriptions rewritten as boundaries
+  (`prompts/topics-v3.json`; the other eight are unchanged). Per-version descriptions live in
+  `prompts/`, so the published dataset's topic list doesn't change.
+- The same two rules were written into `labels/GUIDELINES.md`. Applying "towels count as
+  amenities" changed one label: r0118 (added, outside the split) gained *kitchen and
+  amenities*. Round-1 metrics were recomputed; test and dev numbers are unaffected.
+- v3 is run **once** per model; its test score is the measurement. Any further iteration
+  looks at dev only.
