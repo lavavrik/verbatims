@@ -56,6 +56,19 @@ export function selectSample(reviews: SourceReview[], detectLang: (t: string) =>
   return groups.flatMap((g, i) => spread(g, alloc[i])).sort(byDate);
 }
 
+/** Re-detects each item's language; ids, source ids and text hashes stay exactly as they are. */
+export function relabelLanguages(decision: SampleDecision, texts: Map<string, string>, detect: (t: string) => string = detectLanguage) {
+  const changed: Record<string, number> = {};
+  const items = decision.items.map((it) => {
+    const text = texts.get(it.sourceId);
+    if (text === undefined) throw new Error(`No text for ${it.id}`);
+    const language = detect(text);
+    if (language !== it.language) changed[`${it.language}→${language}`] = (changed[`${it.language}→${language}`] ?? 0) + 1;
+    return { ...it, language };
+  });
+  return { decision: { ...decision, items }, changed };
+}
+
 /** Stable published ids r0001… in original-date order. */
 export function toSampleDecision(listingId: string, sample: SampledReview[]): SampleDecision {
   return {

@@ -28,7 +28,8 @@ beforeEach(async () => { dir = await mkdtemp(join(tmpdir(), 'verbatims-')); tran
 test('topics queue covers every language with at least 5 reviews', async () => {
   const store = await make();
   const ids = store.queue('topics');
-  expect(ids.length).toBeGreaterThanOrEqual(100);
+  expect(ids.length).toBeGreaterThanOrEqual(95);
+  expect(ids.length).toBeLessThanOrEqual(105);
   const byLang: Record<string, number> = {};
   for (const id of ids) { const l = items().find((it) => it.id === id)!.language; byLang[l] = (byLang[l] ?? 0) + 1; }
   for (const l of ['eng', 'ces', 'deu', 'ukr', 'rus']) expect(byLang[l]).toBeGreaterThanOrEqual(5);
@@ -83,4 +84,20 @@ test('translation is refused for languages the owner reads and cached for others
   expect(await store.translate(german.id)).toBe(`EN: ${german.text}`);
   expect(await (await make()).translate(german.id)).toBe(`EN: ${german.text}`);
   expect(translations).toHaveLength(1);
+});
+
+test('topics queue stays near 100 with a long tail of languages, extras included', async () => {
+  // 300 English, 40 French, 12 German, then 20 languages with 2 reviews each.
+  const tail = Array.from({ length: 20 }, (_, i) => `x${String.fromCharCode(97 + i)}x`);
+  const langs = [...Array(300).fill('eng'), ...Array(40).fill('fra'), ...Array(12).fill('deu'), ...tail.flatMap((l) => [l, l])];
+  const many: LabelItem[] = langs.map((language, i) => ({ id: `r${String(i + 1).padStart(4, '0')}`, language, date: '2024-01-01', text: i % 9 === 0 ? 'The bathroom was dirty' : 'Lovely stay', ratings: r4 }));
+  const redated = many.slice(0, 15).map((it) => it.id);
+  const store = await createLabelStore({ dir, items: many, translate: async (t) => t, redated });
+  const ids = store.queue('topics');
+  expect(ids.length).toBeGreaterThanOrEqual(95);
+  expect(ids.length).toBeLessThanOrEqual(105);
+  expect(ids).toEqual(expect.arrayContaining(redated));
+  const count = (l: string) => ids.filter((id) => many.find((it) => it.id === id)!.language === l).length;
+  expect(count('deu')).toBeGreaterThanOrEqual(5); // ≥10 reviews → at least 5
+  for (const l of tail) expect(count(l)).toBeLessThanOrEqual(1); // tiny languages: proportional share only
 });

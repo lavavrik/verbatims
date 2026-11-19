@@ -168,10 +168,15 @@ private copy of it (not committed, since it contains personal data).
 - **Cleanliness confirmation** for step 2/5 candidates: yes or no.
 - Shows progress (e.g. 37 / 100). Can be stopped and resumed.
 
-*Which ~100 reviews get topic labels (builder's call, recorded):* a sample stratified by
-language in proportion to the dataset, with at least 5 per language present. Include the
-re-dated reviews and at least 10 other cleanliness complaints, so the trend question has
-labelled support. For languages the owner can't read (expected: German and others), the
+*Which ~100 reviews get topic labels (builder's call, revised 2026-11-19 with the owner):*
+about 100 in total, **including** the re-dated reviews and 10 other cleanliness complaints,
+so the trend question has labelled support. The rest is a sample stratified by language in
+proportion to the dataset; languages with at least 10 reviews get at least 5 labels, smaller
+ones only their proportional share (a per-language score needs enough reviews to mean
+anything). The original rule, "at least 5 per language present", gave 148 labels on the real
+listing because of a long tail of 1–4-review languages. Language detection is restricted to
+languages that plausibly appear in guest reviews, because unrestricted detection tagged short
+English reviews as Scots, Quechua and similar. For languages the owner can't read (expected: German and others), the
 page shows a machine translation as an aid, and those labels are saved with
 `via_translation: true`. Agreement scores are then reported both with and without them.
 

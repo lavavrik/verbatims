@@ -17,7 +17,8 @@
     "redate": "tsx --env-file-if-exists=.env src/cli/redate.ts",
     "build": "tsx --env-file-if-exists=.env src/cli/build.ts",
     "label": "node --env-file-if-exists=.env node_modules/vite/bin/vite.js --config labeller/vite.config.ts",
-    "typecheck": "tsc -p ."
+    "typecheck": "tsc -p .",
+    "relang": "tsx --env-file-if-exists=.env src/cli/relang.ts"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",

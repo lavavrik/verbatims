@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 import { detectLanguage } from '../src/lang';
-import { isUsableReview, selectSample, toSampleDecision } from '../src/pipeline/sample';
+import { isUsableReview, relabelLanguages, selectSample, toSampleDecision } from '../src/pipeline/sample';
 import type { SourceReview } from '../src/types';
 
 const LANGS = ['eng', 'ces', 'deu', 'ukr', 'rus'];
@@ -53,4 +53,20 @@ test('detectLanguage recognises the expected languages', () => {
   expect(detectLanguage('Byt byl velmi čistý a hostitel byl moc milý, určitě se vrátíme.')).toBe('ces');
   expect(detectLanguage('Дуже гарна квартира, господиня привітна, все було чудово і чисто.')).toBe('ukr');
   expect(detectLanguage('Nice.')).toBe('und');
+});
+
+test('detectLanguage only answers with plausible guest languages', () => {
+  expect(detectLanguage('The flat is near to the tram and good for two people.')).toBe('eng'); // franc alone says Scots
+  expect(detectLanguage('El apartamento es pequeño pero muy limpio y bien ubicado.')).toBe('spa');
+});
+
+test('relabelLanguages updates languages without touching ids or text hashes', () => {
+  const decision = { listingId: 'L', items: [
+    { id: 'r0001', sourceId: '1', language: 'sco', textHash: 'aaa' },
+    { id: 'r0002', sourceId: '2', language: 'eng', textHash: 'bbb' },
+  ] };
+  const texts = new Map([['1', 'The flat is near to the tram and good for two people.'], ['2', 'Lovely little place near the old town, all good.']]);
+  const { decision: out, changed } = relabelLanguages(decision, texts, detectLanguage);
+  expect(out.items.map((i) => [i.id, i.sourceId, i.textHash, i.language])).toEqual([['r0001', '1', 'aaa', 'eng'], ['r0002', '2', 'bbb', 'eng']]);
+  expect(changed).toEqual({ 'sco→eng': 1 });
 });

@@ -14,6 +14,7 @@ export type Complaints = { confirmed: string[]; rejected: string[] };
 export const OWNER_READS = ['eng', 'ces', 'slk', 'ukr', 'rus'];
 export const TOPIC_TARGET = 100;
 export const RATING_CHECKS = 30;
+export const MAJOR_LANGUAGE = 10;
 
 async function readOr<T>(path: string, fallback: T): Promise<T> {
   try { return JSON.parse(await readFile(path, 'utf8')); } catch (e) { if ((e as NodeJS.ErrnoException).code === 'ENOENT') return fallback; throw e; }
@@ -46,15 +47,27 @@ export async function createLabelStore(opts: {
   const items = [...opts.items].sort((a, b) => a.id.localeCompare(b.id));
   const byId = new Map(items.map((it) => [it.id, it]));
 
+  /**
+   * About TOPIC_TARGET reviews in total, the extras included: every re-dated review, 10 more
+   * confirmed complaints, and a language-stratified share for the rest. Languages with at
+   * least MAJOR_LANGUAGE reviews get at least 5; smaller ones get their proportional share.
+   */
   function topicQueue(): string[] {
-    const byLang = new Map<string, LabelItem[]>();
-    for (const it of items) byLang.set(it.language, [...(byLang.get(it.language) ?? []), it]);
-    const base = [...byLang.values()].flatMap((group) => {
-      const quota = Math.min(group.length, Math.max(5, Math.round((TOPIC_TARGET * group.length) / items.length)));
-      return spread(group, quota).map((it) => it.id);
-    });
-    const extra = [...(opts.redated ?? []), ...complaints.confirmed.filter((id) => !(opts.redated ?? []).includes(id)).slice(0, 10)];
-    return [...new Set([...base, ...extra])];
+    const redated = opts.redated ?? [];
+    const extra = [...redated, ...complaints.confirmed.filter((id) => !redated.includes(id)).slice(0, 10)];
+    const budget = Math.max(0, TOPIC_TARGET - extra.length);
+    const pool = items.filter((it) => !extra.includes(it.id));
+    const groups = [...pool.reduce((m, it) => m.set(it.language, [...(m.get(it.language) ?? []), it]), new Map<string, LabelItem[]>()).values()];
+    const exact = groups.map((g) => (budget * g.length) / Math.max(1, pool.length));
+    const quota = groups.map((g, i) => Math.min(g.length, g.length >= MAJOR_LANGUAGE ? Math.max(5, Math.floor(exact[i])) : Math.floor(exact[i])));
+    // Hand out what rounding left over by largest remainder, so the total lands on the budget.
+    let left = budget - quota.reduce((a, b) => a + b, 0);
+    for (const i of exact.map((e, i) => i).sort((a, b) => (exact[b] % 1) - (exact[a] % 1) || a - b)) {
+      if (left <= 0) break;
+      if (quota[i] < groups[i].length) { quota[i]++; left--; }
+    }
+    const base = groups.flatMap((g, i) => spread(g, quota[i]).map((it) => it.id));
+    return [...new Set([...extra, ...base])];
   }
 
   function queue(mode: Mode): string[] {
