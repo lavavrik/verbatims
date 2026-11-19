@@ -1,5 +1,7 @@
-// Manual fixes: npm run redact -- add r0042 "Pavel"   |   npm run redact -- remove r0042 17
+// Manual fixes: npm run redact -- add r0042 "Pavel"  |  remove r0042 17  |  allow r0042 31
+// "allow" marks a position the build flagged that is not a name (e.g. the word "will"); positions are in the published text.
 import { readJsonOr, writeJson } from '../decisions';
+import type { AllowedMention } from '../pipeline/build';
 import { findOccurrences, mergeRedactions, type Redaction } from '../pipeline/redact';
 import { loadSampled } from '../workspace';
 
@@ -19,6 +21,12 @@ if (cmd === 'add') {
   if (kept.length === redactions.length) throw new Error(`No redaction in ${id} starting at ${arg}.`);
   await writeJson(FILE, kept);
   console.log(`Removed redaction at ${arg} from ${id}.`);
+} else if (cmd === 'allow') {
+  const ALLOW = 'decisions/allowed-mentions.json';
+  const allowed = await readJsonOr<AllowedMention[]>(ALLOW, []);
+  if (!id || Number.isNaN(Number(arg))) throw new Error('Usage: allow <id> <start>');
+  await writeJson(ALLOW, [...allowed.filter((a) => !(a.id === id && a.start === Number(arg))), { id, start: Number(arg) }]);
+  console.log(`Allowed the mention at ${arg} in ${id}.`);
 } else {
-  console.log('Usage: npm run redact -- add <id> "<name>" | remove <id> <start>');
+  console.log('Usage: npm run redact -- add <id> "<name>" | remove <id> <start> | allow <id> <start>');
 }
