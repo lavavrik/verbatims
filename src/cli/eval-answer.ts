@@ -5,8 +5,9 @@ import { arg, flag, required } from '../eval/args';
 import type { Effort } from '../eval/classify';
 import { confirmInTerminal } from '../eval/confirm';
 import { PRICES } from '../eval/cost';
+import { makeJudge } from '../eval/judge';
 
 await runAnswer(
   { model: required('model', Object.keys(PRICES)), reps: Number(arg('reps', '3')), effort: arg('effort', 'low') as Effort, yes: flag('yes') },
-  { call: callStructuredWith, confirm: confirmInTerminal, log: console.log, judge: async () => [] },
+  { call: callStructuredWith, confirm: confirmInTerminal, log: console.log, judge: makeJudge() },
 );

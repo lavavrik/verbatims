@@ -19,7 +19,7 @@ export type ResultFile<O = unknown, M = any> = {
   outputs: O[];
   usage: { inputTokens: number; outputTokens: number; estCostUsd: number };
   metrics: M;
-  judge?: { model: string; effort: string; prompt: string; verdicts: unknown[] };
+  judge?: { model: string; effort: string; prompt: string; verdicts: any[]; usage?: { input: number; output: number }; estCostUsd?: number };
 };
 
 /** results/<date>-<kind>-<model>-<prompt>.json, with -2, -3… when that name is taken. */

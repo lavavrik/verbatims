@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { callStructuredWith, pool } from '../llm';
 import { RATING_KEYS } from '../types';
 import { assertQ1Key, monthlyTable, renderContext } from './context';
+import { answerMetrics, type JudgeCheck } from './answerMetrics';
 import { costUsd } from './cost';
 import { loadEvalData, type EvalData } from './data';
 import { loadPromptTemplate, promptHash } from './prompts';
@@ -21,8 +22,8 @@ export const Q1Schema = AnswerSchema.extend({
 export type Answer = z.infer<typeof Q1Schema> | z.infer<typeof AnswerSchema>;
 export type Question = { id: 'Q1' | 'Q2' | 'Q3'; text: string };
 export type AnswerOutput = { questionId: string; rep: number; answer?: Answer & { category?: string; month?: string }; error?: string; usage: { input: number; output: number } };
-export type Verdict = { outputIndex: number; claimIndex: number; reviewId: string; supported: boolean; reason: string };
-export type JudgeFn = (outputs: AnswerOutput[], d: EvalData) => Promise<Verdict[]>;
+export type Verdict = { outputIndex: number; claimIndex: number; reviewId: string; supported: boolean; reason: string; error?: string };
+export type JudgeFn = ((outputs: AnswerOutput[], d: EvalData) => Promise<Verdict[]>) & { model?: string; effort?: string; prompt?: string; usage?: { input: number; output: number } };
 
 export type AnswerOptions = { model: string; effort?: Effort; reps?: number; yes?: boolean; dir?: string; data?: EvalData; questions?: Question[]; template?: string };
 export type AnswerDeps = ClassifyDeps & { judge: JudgeFn };
@@ -79,10 +80,15 @@ export async function runAnswer(opts: AnswerOptions, deps: AnswerDeps): Promise<
     kind: 'answer', createdAt: new Date().toISOString(), model: opts.model, effort, promptVersion: 'answer-v1',
     prompt: system, promptHash: hash, datasetHash: d.datasetHash, splitHash: '', reps, outputs,
     usage: { inputTokens, outputTokens, estCostUsd: costUsd(opts.model, { input: inputTokens, output: outputTokens }) },
-    metrics: {},
-    judge: { model: '', effort: '', prompt: '', verdicts },
+    metrics: answerMetrics(outputs, verdicts, d, await loadJudgeChecks(dir)),
+    judge: { model: deps.judge.model ?? '', effort: deps.judge.effort ?? '', prompt: deps.judge.prompt ?? '', verdicts, usage: deps.judge.usage, estCostUsd: deps.judge.model && deps.judge.usage ? costUsd(deps.judge.model, deps.judge.usage) : 0 } as ResultFile['judge'],
   };
   await writeResult(path, file);
   log(`Wrote ${path}.`);
   return file;
+}
+
+/** The owner's judge spot-check answers, pooled over all runs. */
+export async function loadJudgeChecks(dir = '.'): Promise<JudgeCheck[]> {
+  try { return JSON.parse(await readFile(join(dir, 'labels/judge-checks.json'), 'utf8')); } catch { return []; }
 }

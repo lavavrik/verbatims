@@ -22,7 +22,8 @@
     "eval:split": "tsx --env-file-if-exists=.env src/cli/eval-split.ts",
     "eval:classify": "tsx --env-file-if-exists=.env src/cli/eval-classify.ts",
     "eval:metrics": "tsx --env-file-if-exists=.env src/cli/eval-metrics.ts",
-    "eval:answer": "tsx --env-file-if-exists=.env src/cli/eval-answer.ts"
+    "eval:answer": "tsx --env-file-if-exists=.env src/cli/eval-answer.ts",
+    "eval:judge-check": "tsx --env-file-if-exists=.env src/cli/eval-judge-check.ts"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",

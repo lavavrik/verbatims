@@ -21,7 +21,7 @@ function fakeCall(fail?: (q: string) => boolean) {
   };
   return { call: call as never, calls };
 }
-const data = () => ({ ...evalFixture(1), reviews: real, byId: new Map(real.map((r) => [r.id, r])) });
+const data = () => ({ ...evalFixture(1), reviews: real, byId: new Map(real.map((r) => [r.id, r])), redate: { targetMonth: '2026-06', moves: [], groundTruth: [] } });
 const opts = (over: object = {}) => ({ model: 'claude-haiku-5-5', reps: 2, yes: true, dir, data: data(), questions: QUESTIONS, template: 'Answer from the data.', ...over });
 
 test('asks each question independently reps times, Q1 with the category/month schema, context cached', async () => {
@@ -52,4 +52,16 @@ test('an error is recorded per call and the run completes', async () => {
   const file = (await runAnswer(opts({ reps: 1 }), { call: f.call, confirm: async () => true, judge: async () => [] }))!;
   expect(file.outputs.find((o) => o.questionId === 'Q2')).toMatchObject({ error: 'boom' });
   expect(file.outputs.filter((o) => !o.error)).toHaveLength(2);
+});
+
+test('stores judge verdicts with the judge setup, and fills answer metrics', async () => {
+  const f = fakeCall();
+  const judge = Object.assign(async () => [{ outputIndex: 0, claimIndex: 0, reviewId: 'r0001', supported: true, reason: 'ok' }], {
+    model: 'claude-opus-5-5', effort: 'medium', prompt: 'judge prompt', usage: { input: 10, output: 5 },
+  });
+  const file = (await runAnswer(opts({ reps: 1 }), { call: f.call, confirm: async () => true, judge }))!;
+  expect(file.judge).toMatchObject({ model: 'claude-opus-5-5', effort: 'medium', prompt: 'judge prompt' });
+  expect(file.judge!.verdicts).toHaveLength(1);
+  expect(file.metrics.Q1.q1Correct).toMatchObject({ k: 1, n: 1 });
+  expect(file.metrics.Q3.unsupportedClaims).toMatchObject({ k: 1, n: 1 });
 });
