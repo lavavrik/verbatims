@@ -1,12 +1,42 @@
 [
-  { "name": "cleanliness", "description": "How clean the place was: dirt, dust, stains, smells, hair, bathroom and kitchen hygiene." },
-  { "name": "location", "description": "The neighbourhood and getting around: distance to sights, transport, shops, safety of the area." },
-  { "name": "host communication", "description": "How the host responded and helped: speed of replies, friendliness, problem solving." },
-  { "name": "check-in", "description": "Arrival and departure: key handover, instructions, self check-in, waiting, late arrival." },
-  { "name": "noise", "description": "Sound from the street, neighbours, bars, trams or thin walls, and whether guests could sleep." },
-  { "name": "comfort and beds", "description": "Beds, pillows, sofa, temperature, heating or air conditioning, general comfort." },
-  { "name": "kitchen and amenities", "description": "Equipment provided: kitchen, washing machine, towels, toiletries, coffee, TV." },
-  { "name": "value for money", "description": "Whether the stay felt worth its price, mentions of price, fees or deposits." },
-  { "name": "accuracy vs listing", "description": "Whether the place matched the photos and description: size, view, missing or extra features." },
-  { "name": "wi-fi and work", "description": "Internet speed and reliability, desk or space for working remotely." }
+  {
+    "name": "cleanliness",
+    "description": "How clean the place itself was: dirt, dust, stains, hair, bathroom and kitchen hygiene, and smells coming from the flat (drains, mould, stale smoke). Not smells or smoke from neighbours or the street."
+  },
+  {
+    "name": "location",
+    "description": "The neighbourhood and getting around: distance to sights, transport, shops, safety of the area."
+  },
+  {
+    "name": "host communication",
+    "description": "How the host responded and helped: speed of replies, friendliness, problem solving."
+  },
+  {
+    "name": "check-in",
+    "description": "Arrival and departure: key handover, instructions, self check-in, waiting, late arrival."
+  },
+  {
+    "name": "noise",
+    "description": "Sound from the street, neighbours, bars, trams or thin walls, and whether guests could sleep."
+  },
+  {
+    "name": "comfort and beds",
+    "description": "Beds, pillows, sofa, temperature, heating or air conditioning, general comfort."
+  },
+  {
+    "name": "kitchen and amenities",
+    "description": "Equipment provided: kitchen, washing machine, towels, toiletries, coffee, TV."
+  },
+  {
+    "name": "value for money",
+    "description": "Whether the stay felt worth its price, mentions of price, fees or deposits."
+  },
+  {
+    "name": "accuracy vs listing",
+    "description": "Whether the place matched the photos and description: size, view, missing or extra features."
+  },
+  {
+    "name": "wi-fi and work",
+    "description": "Internet speed and reliability, desk or space for working remotely."
+  }
 ]
